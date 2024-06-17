@@ -1,9 +1,12 @@
-import React from 'react'
+import About from "@/components/about.tsx/about";
+import React from "react";
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
-  )
-}
+    <div>
+      <About />
+    </div>
+  );
+};
 
-export default AboutPage
+export default AboutPage;

@@ -13,7 +13,7 @@ const config: Config = {
         lg: "1024px",
         xl: "1310px",
         "2xl": "1400px",
-        "3xl": "1600px"
+        "3xl": "1700px"
       },
       colors: {
         border: "hsl(var(--border))",
