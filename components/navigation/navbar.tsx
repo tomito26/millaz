@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center px-[340px] absolute w-full">
+    <nav className="flex justify-between items-center md:px-[60px] xl:[80px] 2xl:[100px] 3xl:px-[160px] absolute w-full">
       <div className="h-[120px] w-[120px] relative">
         <Image
           src="/assets/millaz.svg"
