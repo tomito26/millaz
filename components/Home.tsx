@@ -148,10 +148,10 @@ const Home = () => {
         className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]"
       >
         <div>
-          <h1 className="text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl font-bold text-white mb-6">
             Millaz Productions Kenya
           </h1>
-          <p className="max-w-3xl text-white text-lg">
+          <p className="max-w-3xl text-white text-base">
             Experience the magic of theatre with Millaz Productions. From
             timeless classics to groundbreaking new works, we are dedicated to
             delivering powerful performances that captivate and inspire
@@ -326,7 +326,7 @@ const Home = () => {
                 <div className="flex justify-center items-center h-[300px] p-4 my-10 bg-warning-dark/5 rounded-lg">
                   <div className="w-full xl:w-12/12 rounded-lg">
                     <div>
-                      <p className="w-full text-gray mb-5 text-sm md:text-base">
+                      <p className="w-full text-gray mb-5 text-sm">
                         <Quote className="rotate-180 mb-px stroke-warning-dark  mr-2" />
                         {testimony.testimony}
                         <Quote className="stroke-warning-dark inline-block mt-px  ml-2" />
