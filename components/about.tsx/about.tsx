@@ -175,7 +175,7 @@ const About = () => {
           </div>
           <div>
             <h2 className="text-xl text-warning-dark font-bold text-center my-4">
-              Our Mision
+              Our Mission
             </h2>
             <p className="text-base text-tundora text-center">
               To create unforgettable stage experiences that showcase the best
@@ -230,22 +230,85 @@ const About = () => {
         </div>
       </div>
       <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] w-full 3xl:px-[160px] my-10">
-        <h2 className="text-4xl text-monochrome font-bold mb-8">
+        <h2 className="text-4xl text-monochrome font-bold mb-8 text-center">
           Our <span className="text-warning-dark">Team</span>
         </h2>
         <div className="grid grid-cols-3 gap-10">
           {teams.map((team, index) => (
-            <div key={index} className="flex flex-col items-center justify-center">
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center"
+            >
               <div className="relative h-28 w-28 rounded-full mb-4">
-                <Image src={team.profile_url} fill alt={team.names} className="absolute object-cover rounded-full"/>
+                <Image
+                  src={team.profile_url}
+                  fill
+                  alt={team.names}
+                  className="absolute object-cover rounded-full"
+                />
               </div>
               <div>
-                <h3 className="text-lg text-monochrome text-center font-bold">{team.names}</h3>
-                <p className="text-base text-warning-dark text-center font-bold mb-3">{team.title}</p>
+                <h3 className="text-lg text-monochrome text-center font-bold">
+                  {team.names}
+                </h3>
+                <p className="text-lg text-warning-dark text-center font-bold mb-3">
+                  {team.title}
+                </p>
                 <p className="text-base text-center">{team.profile}</p>
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] w-full 3xl:px-[160px] my-12">
+        <h2 className="text-monochrome font-bold text-4xl mb-8 text-center">Contact <span className="text-warning-dark">Us</span></h2>
+        <div className="flex justify-center">
+          <form>
+            <div className="flex flex-col mb-8">
+              <label htmlFor="first_name" className="text-base text-monochrome">
+                First Name
+              </label>
+              <input
+                type="text"
+                name="first_name"
+                id="first_name"
+                className="border border-stroke-color w-[640px] h-10 outline-none px-2 rounded-md"
+                placeholder="ie. John"
+              />
+            </div>
+            <div className="flex flex-col mb-8">
+              <label htmlFor="first_name">Last Name</label>
+              <input
+                type="text"
+                name="last_name"
+                id="first_name"
+                className="border border-stroke-color w-[640px] h-10 outline-none px-2 rounded-md"
+                placeholder="ie. Doe"
+              />
+            </div>
+            <div className="flex flex-col mb-8">
+              <label htmlFor="first_name">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="first_name"
+                className="border border-stroke-color w-[640px] h-10 outline-none px-2 rounded-md"
+                placeholder="ie. johndoe@gmail.com"
+              />
+            </div>
+            <div className="flex flex-col mb-8">
+              <label htmlFor="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                className="border border-stroke-color w-[640px] h-[100px] outline-none px-2 rounded-md resize-none"
+                placeholder="message"
+              ></textarea>
+            </div>
+            <div>
+              <button className="w-full bg-monochrome text-base font-semibold text-white rounded-md py-3 hover:bg-monochrome/90">Send Message</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

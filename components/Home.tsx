@@ -326,7 +326,7 @@ const Home = () => {
                 <div className="flex justify-center items-center h-[300px] p-4 my-10 bg-warning-dark/5 rounded-lg">
                   <div className="w-full xl:w-12/12 rounded-lg">
                     <div>
-                      <p className="w-full text-gray mb-5 text-sm">
+                      <p className="w-full text-gray mb-5 text-base">
                         <Quote className="rotate-180 mb-px stroke-warning-dark  mr-2" />
                         {testimony.testimony}
                         <Quote className="stroke-warning-dark inline-block mt-px  ml-2" />
@@ -341,7 +341,7 @@ const Home = () => {
                               className="absolute object-cover rounded-full"
                             />
                           </div>
-                          <h3 className="text-base md:text-lg font-semibold mt-3 text-body-gray text-right">
+                          <h3 className="text-base font-semibold mt-3 text-body-gray text-right">
                             {testimony.client}
                           </h3>
                         </div>
