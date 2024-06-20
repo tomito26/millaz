@@ -195,7 +195,7 @@ const Home = () => {
         </div>
         <div className="relative h-[380px] w-[500px] rounded-xl">
           <Image
-            src="/assets/students-rehashing-theater-class.jpg"
+            src="/assets/HDKC8377.JPG"
             alt="actors on stage"
             fill
             className="absolute object-cover rounded-tl-[100px] rounded-br-[100px]"
