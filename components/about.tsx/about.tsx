@@ -8,7 +8,7 @@ const About = () => {
       title: "Artistic Excellence",
       description:
         "We strive for the highest standards of artistic quality in all our productions, performances, and creative endeavors.",
-      path: "/assets/IMG-20190826-WA0094.jpg",
+      path: "/assets/CRNY5559.JPG",
     },
     {
       title: "Community Engagement",
@@ -20,7 +20,7 @@ const About = () => {
       title: "Collaboration",
       description:
         "We believe that collaboration is key to creating innovative and high-quality productions. We foster a culture of cooperation and mutual respect among our artists, staff, and partners.",
-      path: "/assets/IMG-20190826-WA0094.jpg",
+      path: "/assets/FTKV1426.JPG",
     },
     {
       title: "Social Responsibility",
@@ -32,13 +32,13 @@ const About = () => {
       title: "Creativity",
       description:
         "We encourage and celebrate creativity in all its forms, from scriptwriting and directing to design and performance.",
-      path: "/assets/different-moments-theater-class.jpg",
+      path: "/assets/BGCZ7380.JPG",
     },
     {
       title: "Integrity",
       description:
         "We operate with integrity, honesty, and transparency in all our dealings, both on and off stage.",
-      path: "/assets/students-rehashing-theater-class.jpg",
+      path: "/assets/FIPU5747.JPG",
     },
   ];
   const teams = [
@@ -92,45 +92,30 @@ const About = () => {
       <div
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/different-moments.jpg')",
-          height: "500px",
+            "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/EIUM2366.JPG')",
+          height: "80vh",
           width: "100%",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]"
+        className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
       >
         <div>
-          <h1 className="text-5xl font-bold text-white mb-6">About</h1>
-          <p className="max-w-3xl text-white text-base">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">About</h1>
+          <p className="max-w-3xl text-white text-sm md:text-base">
             We are proud to be part of the vibrant Nairobi theatre scene,
             bringing world-class productions to the Kenya National Theatre and
             beyond
           </p>
         </div>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-16 flex justify-between">
-        <div className="w-6/12">
-          <h2 className="text-4xl text-monochrome font-bold mb-3">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 my-16 flex md:flex-row flex-col justify-between items-center gap-5">
+        <div className="lg:w-6/12 w-full">
+          <h2 className="text-2xl md:text-4xl text-monochrome font-bold mb-3">
             Who <span className="text-warning-dark">We Are</span>
           </h2>
-          <p className="text-tundora text-base mb-4">
-            We are a passionate and dedicated team of artists and professionals
-            committed to bringing high-quality, engaging stage productions to
-            audiences of all ages. Founded on a deep love for the performing
-            arts, our mission is to create unforgettable experiences that
-            inspire, entertain, and connect people from diverse backgrounds.
-          </p>
-          <p className="text-tundora text-base mb-4">
-            With a rich history of producing innovative and critically acclaimed
-            shows, we are driven by a desire to push the boundaries of
-            storytelling and to provide a platform for emerging and established
-            talent alike. Our productions are carefully crafted to showcase the
-            best of local and international talent, blending traditional and
-            contemporary styles to create unique and captivating performances.
-          </p>
-          <p className="text-tundora text-base">
+          <p className="text-tundora text-sm md:text-base mb-4">
             Millaz Productions Kenya started of as Millers Productions Kenya in
             2016 but had to undergo a name change in 2018 in respect to
             registration logistics. An idea crafted by Senator Cleophas Malala
@@ -140,78 +125,85 @@ const About = () => {
             settled on the name Millers, a name coined by Allan Lumumba and
             Emmanuel Chindia.
           </p>
+          <p className="text-tundora text-sm md:text-base mb-4">
+            We are a passionate and dedicated team of artists and professionals
+            committed to bringing high-quality, engaging stage productions to
+            audiences of all ages. Founded on a deep love for the performing
+            arts, our mission is to create unforgettable experiences that
+            inspire, entertain, and connect people from diverse backgrounds.
+          </p>
         </div>
-        <div className="relative h-[400px] w-[560px] rounded-xl">
+        <div className="relative md:h-[400px] h-[230px] w-full md:w-[560px] rounded-xl">
           <Image
             src="/assets/HDKC8377.JPG"
             alt="actors on stage"
             fill
-            className="absolute object-cover rounded-tl-[100px] rounded-br-[100px]"
+            className="absolute object-cover rounded-tl-[40px] rounded-br-[40px]"
           />
         </div>
       </div>
-      <div className="bg-[#f1f1f1] py-12 flex gap-20 md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]">
-        <div className="bg-white w-[400px] px-4 py-5 shadow-md rounded-lg">
+      <div className="bg-[#f1f1f1] py-12 flex flex-col md:flex-row gap-20 md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4">
+        <div className="bg-white w-full md:w-[400px] px-4 py-5 shadow-md rounded-lg">
           <div className="flex flex-col items-center justify-center">
             <div className="h-12 w-12 bg-[#f1f1f1] flex justify-center items-center rounded-full">
               <Telescope className="h-6 w-6 stroke-warning-dark" />
             </div>
           </div>
           <div>
-            <h2 className="text-xl text-warning-dark font-bold text-center my-4">
+            <h2 className="text-lg md:text-xl text-warning-dark font-bold text-center my-4">
               Our Vision
             </h2>
-            <p className="text-base text-tundora text-center">
+            <p className="text-sm md:text-base text-tundora text-center">
               Inspire and entertain audiences through innovative, high-quality
               productions that celebrate the human experience.
             </p>
           </div>
         </div>
-        <div className="bg-white w-[400px] shadow-md rounded-lg px-4 py-5">
+        <div className="bg-white w-full md:w-[400px] shadow-md rounded-lg px-4 py-5">
           <div className="flex justify-center">
             <div className="h-12 w-12 bg-[#f1f1f1] rounded-full flex justify-center items-center">
               <Crosshair className="h-6 w-6 stroke-warning-dark" />
             </div>
           </div>
           <div>
-            <h2 className="text-xl text-warning-dark font-bold text-center my-4">
+            <h2 className="text-lg md:text-xl text-warning-dark font-bold text-center my-4">
               Our Mission
             </h2>
-            <p className="text-base text-tundora text-center">
+            <p className="text-sm md:text-base text-tundora text-center">
               To create unforgettable stage experiences that showcase the best
               of local and international talent, while promoting community
               engagement, social responsibility, and artistic excellence.
             </p>
           </div>
         </div>
-        <div className="bg-white w-[400px] shadow-md rounded-lg px-4 py-5">
+        <div className="bg-white w-full md:w-[400px] shadow-md rounded-lg px-4 py-5">
           <div className="flex justify-center">
             <div className="h-12 w-12 bg-[#f1f1f1] rounded-full flex justify-center items-center">
               <Handshake className="h-6 w-6 stroke-warning-dark" />
             </div>
           </div>
           <div>
-            <h2 className="text-xl text-warning-dark font-bold text-center my-4">
+            <h2 className="text-lg md:text-xl text-warning-dark font-bold text-center my-4">
               Our Commitment
             </h2>
-            <p className="text-tundora text-base text-center">
+            <p className="text-tundora text-sm md:text-base text-center">
               We are committed to creating a safe, inclusive, and respectful
               environment for all our artists, staff, and audience members.
             </p>
           </div>
         </div>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] w-full 3xl:px-[160px] py-12 flex items-center justify-between">
-        <h2 className="text-4xl text-monochrome font-bold">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] w-full 3xl:px-[160px] py-12 px-4 flex flex-col md:flex-row items-center justify-between gap-5">
+        <h2 className="text-2xl md:text-4xl text-monochrome font-bold">
           Our <span className="text-warning-dark">Values</span>
         </h2>
-        <div className="w-8/12">
+        <div className="w-full md:w-8/12">
           {values.map((value, index) => (
             <div
               key={index}
-              className="flex items-center shrink-0 grow-0 mb-6 gap-6"
+              className="flex flex-col-reverse justify-start md:flex-row items-center shrink-0 grow-0 mb-6 gap-6 w-full"
             >
-              <div className="relative h-[160px] w-[240px] shrink-0 rounded-lg">
+              <div className="relative h-[240px] md:h-[160px] w-full md:w-[240px] shrink-0 rounded-lg">
                 <Image
                   src={value.path}
                   alt={value.title}
@@ -220,24 +212,24 @@ const About = () => {
                 />
               </div>
               <div className="">
-                <h2 className="text-lg text-warning-dark font-bold">
+                <h2 className="md:text-lg text-base text-warning-dark font-bold">
                   {value.title}
                 </h2>
-                <p className="text-tundora text-base">{value.description}</p>
+                <p className="text-tundora text-sm md:text-base">{value.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] w-full 3xl:px-[160px] my-10">
-        <h2 className="text-4xl text-monochrome font-bold mb-8 text-center">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] px-4 w-full 3xl:px-[160px] my-10">
+        <h2 className="text-2xl md:text-4xl text-monochrome font-bold mb-8 text-center">
           Our <span className="text-warning-dark">Team</span>
         </h2>
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {teams.map((team, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center"
+              className="flex flex-col items-center justify-center w-full"
             >
               <div className="relative h-28 w-28 rounded-full mb-4">
                 <Image
@@ -247,23 +239,23 @@ const About = () => {
                   className="absolute object-cover rounded-full"
                 />
               </div>
-              <div>
-                <h3 className="text-lg text-monochrome text-center font-bold">
+              <div className="w-full">
+                <h3 className="text-base md:text-lg text-monochrome text-center font-bold">
                   {team.names}
                 </h3>
-                <p className="text-lg text-warning-dark text-center font-bold mb-3">
+                <p className="text-base md:text-lg text-warning-dark text-center font-bold mb-3">
                   {team.title}
                 </p>
-                <p className="text-base text-center">{team.profile}</p>
+                <p className="text-sm md:text-base text-center">{team.profile}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] w-full 3xl:px-[160px] my-12">
-        <h2 className="text-monochrome font-bold text-4xl mb-8 text-center">Contact <span className="text-warning-dark">Us</span></h2>
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] w-full 3xl:px-[160px] my-12 px-4">
+        <h2 className="text-monochrome font-bold text-2xl md:text-4xl mb-8 text-center">Contact <span className="text-warning-dark">Us</span></h2>
         <div className="flex justify-center">
-          <form>
+          <form className="md:w-[640px] w-full">
             <div className="flex flex-col mb-8">
               <label htmlFor="first_name" className="text-base text-monochrome">
                 First Name
@@ -272,7 +264,7 @@ const About = () => {
                 type="text"
                 name="first_name"
                 id="first_name"
-                className="border border-stroke-color w-[640px] h-10 outline-none px-2 rounded-md"
+                className="border border-stroke-color w-full h-10 outline-none px-2 rounded-md"
                 placeholder="ie. John"
               />
             </div>
@@ -282,7 +274,7 @@ const About = () => {
                 type="text"
                 name="last_name"
                 id="first_name"
-                className="border border-stroke-color w-[640px] h-10 outline-none px-2 rounded-md"
+                className="border border-stroke-color w-full h-10 outline-none px-2 rounded-md"
                 placeholder="ie. Doe"
               />
             </div>
@@ -292,7 +284,7 @@ const About = () => {
                 type="email"
                 name="email"
                 id="first_name"
-                className="border border-stroke-color w-[640px] h-10 outline-none px-2 rounded-md"
+                className="border border-stroke-color w-full h-10 outline-none px-2 rounded-md"
                 placeholder="ie. johndoe@gmail.com"
               />
             </div>
@@ -301,7 +293,7 @@ const About = () => {
               <textarea
                 name="message"
                 id="message"
-                className="border border-stroke-color w-[640px] h-[100px] outline-none px-2 rounded-md resize-none"
+                className="border border-stroke-color w-full h-[100px] outline-none px-2 rounded-md resize-none"
                 placeholder="message"
               ></textarea>
             </div>

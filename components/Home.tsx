@@ -144,41 +144,44 @@ const Home = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
+          backgroundAttachment: "fixed"
         }}
-        className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]"
+        className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
       >
         <div>
-          <h1 className="text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
             Millaz Productions Kenya
           </h1>
-          <p className="max-w-3xl text-white text-base">
+          <p className="max-w-3xl text-white text-sm md:text-base">
             Experience the magic of theatre with Millaz Productions. From
             timeless classics to groundbreaking new works, we are dedicated to
             delivering powerful performances that captivate and inspire
           </p>
           <div className="mt-6 space-x-6">
-            <button className="bg-warning-dark py-2.5 px-8 text-base text-white rounded-md hover:bg-warning-dark/85 font-medium">
+            <Link href="/about">
+            <button className="bg-warning-dark py-2.5 px-5 md:px-8  text-sm md:text-base text-white rounded-md hover:bg-warning-dark/85 font-medium">
               Find out more
             </button>
-            <button className="text-white py-2.5 px-8 border-white border-2 rounded-md text-base hover:bg-white hover:text-warning-dark font-medium">
+            </Link>
+            <button className="text-white py-2.5 px-5 md:px-8 border-white border-2 rounded-md text-sm md:text-base hover:bg-white hover:text-warning-dark font-medium">
               Our Shows
             </button>
           </div>
         </div>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-16 flex justify-between">
-        <div className="w-6/12">
-          <h2 className="text-4xl text-monochrome font-bold mb-3">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-16 flex justify-between flex-col md:flex-row px-4 pb-5">
+        <div className="w-full md:w-6/12">
+          <h2 className="md:text-4xl text-2xl text-monochrome font-bold mb-3">
             Who <span className="text-warning-dark">We Are</span>
           </h2>
-          <p className="text-tundora text-base mb-4">
+          <p className="text-tundora text-sm md:text-base mb-4">
             We are a passionate and dedicated team of artists and professionals
             committed to bringing high-quality, engaging stage productions to
             audiences of all ages. Founded on a deep love for the performing
             arts, our mission is to create unforgettable experiences that
             inspire, entertain, and connect people from diverse backgrounds.
           </p>
-          <p className="text-tundora text-base mb-10">
+          <p className="text-tundora text-sm md:text-base">
             With a rich history of producing innovative and critically acclaimed
             shows, we are driven by a desire to push the boundaries of
             storytelling and to provide a platform for emerging and established
@@ -186,30 +189,24 @@ const Home = () => {
             best of local and international talent, blending traditional and
             contemporary styles to create unique and captivating performances.
           </p>
-          <Link
-            href="/about"
-            className="bg-warning-dark py-2.5 px-8 text-base text-white rounded-md hover:bg-warning-dark/85 font-medium"
-          >
-            Learn More
-          </Link>
         </div>
-        <div className="relative h-[380px] w-[500px] rounded-xl">
+        <div className="relative md:h-[300px] h-[240px] w-full md:w-[500px] rounded mt-6">
           <Image
             src="/assets/HDKC8377.JPG"
             alt="actors on stage"
             fill
-            className="absolute object-cover rounded-tl-[100px] rounded-br-[100px]"
+            className="absolute object-cover rounded-tl-[40px] rounded-br-[40px]"
           />
         </div>
       </div>
-      <div className="md:px-[60px] xl-px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-24">
-        <h2 className="text-4xl font-bold  text-monochrome mb-8">
+      <div className="md:px-[60px] xl-px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 my-24">
+        <h2 className="text-2xl md:text-4xl font-bold  text-monochrome mb-8">
           Upcoming <span className="text-warning-dark">Productions</span>
         </h2>
-        <div className="flex gap-10">
+        <div className="flex flex-col md:flex-row gap-10">
           {productions.map((production) => (
             <div key={production.id}>
-              <div className="relative h-[400px] w-[330px] rounded-lg">
+              <div className="relative h-[360px] md:h-[400px] w-full md:w-[330px] rounded-lg">
                 <Image
                   src={production.poster_url}
                   alt={production.name}
@@ -238,7 +235,7 @@ const Home = () => {
                     })}
                   </span>
                 </p>
-                <p className="text-sm text-tundora break-all mb-3">
+                <p className="text-sm text-tundora break-all mb-5">
                   {production.description.length > 100
                     ? `${production.description.substring(0, 200)}...`
                     : production.description}
@@ -252,7 +249,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-full bg-warning-dark py-12">
-        <p className="text-white text-lg px-[60px] xl:px-[80px] 2xl:[100px] 3xl:px-[160px] text-center">
+        <p className="text-white text-base md:text-lg md:px-[60px] xl:px-[80px] 2xl:[100px] 3xl:px-[160px] px-4 text-center">
           We are dedicated to bringing captivating stories to life through
           innovative and memorable stage performances. Our passion for theater
           drives us to create dynamic productions that resonate with audiences
@@ -262,14 +259,14 @@ const Home = () => {
         </p>
       </div>
       <div className="bg-[#f1f1f1] py-16">
-        <div className="px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[200px]">
-          <h2 className="text-4xl font-bold text-monochrome mb-6">
+        <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[200px] px-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-monochrome mb-6">
             What <span className="text-warning-dark">We Do</span>
           </h2>
-          <div className="flex gap-6">
+          <div className="flex flex-col md:flex-row gap-6">
             {our_services.map((service) => (
               <div
-                className="shadow-md w-[350px] bg-white rounded-b-md"
+                className="shadow-md w-full md:w-[350px] bg-white rounded-b-md"
                 key={service.id}
               >
                 <div className="relative w-full h-[250px] rounded-t-md">
@@ -280,7 +277,7 @@ const Home = () => {
                     className="absolute object-cover rounded-t-md"
                   />
                 </div>
-                <div className="px-3 py-4">
+                <div className="px-3 py-5">
                   <h3 className="font-bold text-base text-tundora">
                     {service.title}
                   </h3>
@@ -293,8 +290,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] py-16">
-        <h2 className="text-4xl text-monochrome font-bold">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 py-16">
+        <h2 className="text-2xl md:text-4xl text-monochrome font-bold">
           Our Clients <span className="text-warning-dark">Testimonials</span>
         </h2>
         <div className="flex justify-center">
@@ -354,13 +351,13 @@ const Home = () => {
           </Swiper>
         </div>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] py-16">
-        <h1 className="text-4xl font-bold text-monochrome mb-8">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] py-16 px-4">
+        <h1 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
           Our <span className="text-warning-dark">Galleries</span>
         </h1>
         <div className="flex flex-wrap gap-3">
           {galleries.map((gallery) => (
-            <div key={gallery.id} className="h-[360px] w-[360px] xl:h-[300px] xl:w-[360px] 2xl:w-[350px] 3xl:w-[450px] rounded-md relative">
+            <div key={gallery.id} className="h-[240px] w-full md:w-[360px] xl:h-[300px] xl:w-[360px] 2xl:w-[350px] 3xl:w-[450px] rounded-md relative">
               <Image
                 src={gallery.path}
                 fill
