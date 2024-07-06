@@ -1,4 +1,10 @@
 "use client";
+import {
+  galleries,
+  our_services,
+  productions,
+  testimonials,
+} from "@/lib/constants";
 import { Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,130 +15,15 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Home = () => {
-  const productions = [
+  const news_updates = [
     {
-      id: 1,
-      poster_url: "/assets/IMG-20240502-WA0001.jpg",
-      start_date: "2024-06-14",
-      end_date: "2024-06-16",
-      name: "Backstreet",
-      description: `Backstreet is a play  delving into the intricate and often challenging world of mental health. The narrative centers around a close-knit group of friends, each grappling with their own personal battles and emotional struggles. Through a series of heartfelt and dramatic scenes, the play explores themes of friendship, resilience, and the often unspoken pain of mental illness. Set against the backdrop of everyday life in Kenya, "Backstreet" poignantly portrays how mental health issues can affect anyone, regardless of age, gender, or social status. The characters' journeys reflect a range of experiences, from anxiety and depression to more severe mental health conditions. As they navigate their struggles, the friends offer each other support, sometimes falteringly, sometimes with profound empathy, highlighting the importance of community and understanding. The production is both an artistic endeavor and a social commentary, aiming to raise awareness about mental health issues and destigmatize seeking help. Through powerful performances and a thoughtful script, "Backstreet" challenges audiences to reflect on their own perceptions of mental health and the ways in which they can support those around them.`,
-    },
-    {
-      id: 2,
-      poster_url: "/assets/IMG-20240502-WA0001.jpg",
-      start_date: "2024-06-14",
-      end_date: "2024-06-16",
-      name: "Backstreet",
-      description: `Backstreet is a play  delving into the intricate and often challenging world of mental health. The narrative centers around a close-knit group of friends, each grappling with their own personal battles and emotional struggles. Through a series of heartfelt and dramatic scenes, the play explores themes of friendship, resilience, and the often unspoken pain of mental illness. Set against the backdrop of everyday life in Kenya, "Backstreet" poignantly portrays how mental health issues can affect anyone, regardless of age, gender, or social status. The characters' journeys reflect a range of experiences, from anxiety and depression to more severe mental health conditions. As they navigate their struggles, the friends offer each other support, sometimes falteringly, sometimes with profound empathy, highlighting the importance of community and understanding. The production is both an artistic endeavor and a social commentary, aiming to raise awareness about mental health issues and destigmatize seeking help. Through powerful performances and a thoughtful script, "Backstreet" challenges audiences to reflect on their own perceptions of mental health and the ways in which they can support those around them.`,
-    },
-    {
-      id: 3,
-      poster_url: "/assets/IMG-20240502-WA0001.jpg",
-      start_date: "2024-06-14",
-      end_date: "2024-06-16",
-      name: "Backstreet",
-      description: `Backstreet is a  play  delving into the intricate and often challenging world of mental health. The narrative centers around a close-knit group of friends, each grappling with their own personal battles and emotional struggles. Through a series of heartfelt and dramatic scenes, the play explores themes of friendship, resilience, and the often unspoken pain of mental illness. Set against the backdrop of everyday life in Kenya, "Backstreet" poignantly portrays how mental health issues can affect anyone, regardless of age, gender, or social status. The characters' journeys reflect a range of experiences, from anxiety and depression to more severe mental health conditions. As they navigate their struggles, the friends offer each other support, sometimes falteringly, sometimes with profound empathy, highlighting the importance of community and understanding. The production is both an artistic endeavor and a social commentary, aiming to raise awareness about mental health issues and destigmatize seeking help. Through powerful performances and a thoughtful script, "Backstreet" challenges audiences to reflect on their own perceptions of mental health and the ways in which they can support those around them.`,
+      title: "Young script writers map out violence on the stage",
+      blog_content:
+        "There's a new generation of scriptwriters at Millaz Production, prepared to speak out bluntly, frankly, even ferociously about injustices they have witnessed in Kenyan society.Not that Xavier Nato, founder and chief playwright for the troupe was conservative by any means. But a play like 'I know rights'  is bound to shock a few Kenyans who have grown up knowing the wisdom or at least the tried-and-true survival tactic called self-censorship.There is no censoring of the youth's attitudes towards the cops in Millaz' stunning drama that premiered this past weekend at Kenya Cultural Centre's Ukumbi Mdogo.Co-scripted by Brian Irungu and Saumu Kombo, 'I know My Rights'",
+      image: ""
     },
   ];
-  const our_services = [
-    {
-      id: 1,
-      title: "Stage Performances",
-      image_url: "/assets/IMG-20190826-WA0094.jpg",
-      description:
-        "We organize and perform captivating stage plays that showcase the talents of our skilled cast and crew.",
-    },
-    {
-      id: 2,
-      title: "Film Production",
-      image_url: "/assets/students-rehashing-theater.jpg",
-      description:
-        "We are involved in the production of films, covering scriptwriting, direction, and other aspects of the filmmaking process.",
-    },
-    {
-      id: 3,
-      title: "Consultation",
-      image_url: "/assets/students-rehashing-theater-class.jpg",
-      description:
-        "Our team of experienced professionals offers expert consultation services to individuals and organizations within the film and theatre industries",
-    },
-    {
-      id: 4,
-      title: "Training",
-      image_url: "/assets/IMG-20190826-WA0094.jpg",
-      description:
-        "We provide training programs designed to develop the skills and expertise of aspiring artists and professionals in the field.",
-    },
-  ];
-  const testimonials = [
-    {
-      id: 1,
-      testimony:
-        "The play was a thrilling experience. The cast did an excellent job of bringing the characters to life. I loved the way the story unfolded, keeping me on the edge of my seat",
-      client: "John Mwangi",
-      image: "/assets/blank-profile-picture-973460_1280.png",
-    },
-    {
-      id: 2,
-      testimony:
-        "I was blown away by the talent on display. The music, the acting, and the direction all came together to create an unforgettable evening",
-      client: "Nancy Wanjiru",
-      image: "/assets/blank-profile-picture-973460_1280.png",
-    },
-    {
-      id: 3,
-      testimony:
-        "I was impressed by the young talent on display. The direction, scriptwriting, and acting were all top-notch. The play was a true thriller, keeping me guessing until the very end.",
-      client: "James Mwangi",
-      image: "/assets/blank-profile-picture-973460_1280.png",
-    },
-    {
-      id: 4,
-      testimony:
-        "The play was a wild ride from start to finish. The way it balanced humor and suspense was impressive. I loved the way the characters interacted and the twists that kept me on my toes",
-      client: "Lilian Muthoni",
-      image: "/assets/blank-profile-picture-973460_1280.png",
-    },
-  ];
-  const galleries = [
-    {
-      id: 1,
-      path: "/assets/IMG-20190826-WA0177.jpg",
-    },
-    {
-      id: 2,
-      path: "/assets/IMG-20240518-WA0016.jpg",
-    },
-    {
-      id: 3,
-      path: "/assets/IMG-20240518-WA0011.jpg",
-    },
-    {
-      id: 4,
-      path: "/assets/IMG-20190826-WA0094.jpg",
-    },
-    {
-      id: 5,
-      path: "/assets/IMG-20190826-WA0094.jpg",
-    },
-    {
-      id: 6,
-      path: "/assets/IMG-20190826-WA0094.jpg",
-    },
-    {
-      id: 7,
-      path: "/assets/IMG-20190826-WA0094.jpg",
-    },
-    {
-      id: 8,
-      path: "/assets/IMG-20190826-WA0094.jpg",
-    },
-    {
-      id: 9,
-      path: "/assets/different-moments.jpg",
-    },
-  ];
+
   return (
     <div className="w-full">
       <div
@@ -144,7 +35,7 @@ const Home = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed"
+          backgroundAttachment: "fixed",
         }}
         className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
       >
@@ -159,9 +50,9 @@ const Home = () => {
           </p>
           <div className="mt-6 space-x-6">
             <Link href="/about">
-            <button className="bg-warning-dark py-2.5 px-5 md:px-8  text-sm md:text-base text-white rounded-md hover:bg-warning-dark/85 font-medium">
-              Find out more
-            </button>
+              <button className="bg-warning-dark py-2.5 px-5 md:px-8  text-sm md:text-base text-white rounded-md hover:bg-warning-dark/85 font-medium">
+                Find out more
+              </button>
             </Link>
             <button className="text-white py-2.5 px-5 md:px-8 border-white border-2 rounded-md text-sm md:text-base hover:bg-white hover:text-warning-dark font-medium">
               Our Shows
@@ -169,7 +60,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-16 flex justify-between flex-col md:flex-row px-4 pb-5">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-16 flex justify-between flex-col md:flex-row px-4 gap-5">
         <div className="w-full md:w-6/12">
           <h2 className="md:text-4xl text-2xl text-monochrome font-bold mb-3">
             Who <span className="text-warning-dark">We Are</span>
@@ -190,12 +81,12 @@ const Home = () => {
             contemporary styles to create unique and captivating performances.
           </p>
         </div>
-        <div className="relative md:h-[300px] h-[240px] w-full md:w-[500px] rounded mt-6">
+        <div className="relative md:h-[300px] h-[240px] w-full md:w-[560px] rounded ">
           <Image
             src="/assets/HDKC8377.JPG"
             alt="actors on stage"
             fill
-            className="absolute object-cover rounded-tl-[40px] rounded-br-[40px]"
+            className="absolute object-cover rounded-tl-[20px] rounded-br-[20px]"
           />
         </div>
       </div>
@@ -357,7 +248,10 @@ const Home = () => {
         </h1>
         <div className="flex flex-wrap gap-3">
           {galleries.map((gallery) => (
-            <div key={gallery.id} className="h-[240px] w-full md:w-[360px] xl:h-[300px] xl:w-[360px] 2xl:w-[350px] 3xl:w-[450px] rounded-md relative">
+            <div
+              key={gallery.id}
+              className="h-[240px] w-full md:w-[360px] xl:h-[300px] xl:w-[360px] 2xl:w-[350px] 3xl:w-[450px] rounded-md relative"
+            >
               <Image
                 src={gallery.path}
                 fill

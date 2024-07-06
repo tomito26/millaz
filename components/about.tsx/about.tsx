@@ -1,91 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { Crosshair, Handshake, Telescope } from "lucide-react";
+import { teams, values } from "@/lib/constants";
 
 const About = () => {
-  const values = [
-    {
-      title: "Artistic Excellence",
-      description:
-        "We strive for the highest standards of artistic quality in all our productions, performances, and creative endeavors.",
-      path: "/assets/CRNY5559.JPG",
-    },
-    {
-      title: "Community Engagement",
-      description:
-        "We believe in the power of the arts to bring people together and foster a sense of community. We are committed to engaging with our audience and the wider community through our productions.",
-      path: "/assets/20240512211232_IMG_4575.JPG",
-    },
-    {
-      title: "Collaboration",
-      description:
-        "We believe that collaboration is key to creating innovative and high-quality productions. We foster a culture of cooperation and mutual respect among our artists, staff, and partners.",
-      path: "/assets/FTKV1426.JPG",
-    },
-    {
-      title: "Social Responsibility",
-      description:
-        "We recognize the impact that our work can have on the world and are committed to using our platform to promote positive change and social responsibility.",
-      path: "/assets/20240511211639_IMG_3375-01.jpeg",
-    },
-    {
-      title: "Creativity",
-      description:
-        "We encourage and celebrate creativity in all its forms, from scriptwriting and directing to design and performance.",
-      path: "/assets/BGCZ7380.JPG",
-    },
-    {
-      title: "Integrity",
-      description:
-        "We operate with integrity, honesty, and transparency in all our dealings, both on and off stage.",
-      path: "/assets/FIPU5747.JPG",
-    },
-  ];
-  const teams = [
-    {
-      names: "Mr James Miller",
-      title: "Creative Director",
-      profile:
-        "James brings over 15 years of experience in theatre production and direction to Millaz Production Company. With a passion for storytelling and a keen eye for detail, he oversees the creative aspects of each stage production, ensuring artistic integrity and innovation in every project.",
-      profile_url: "/assets/young-handsome-man-posing-with-hat.jpg",
-    },
-    {
-      names: "Miss Sarah Collins",
-      title: "Production Manager",
-      profile:
-        "Sarah is a seasoned production manager with a strong background in stage logistics and operations. With a meticulous attention to detail and exceptional organizational skills, she ensures that every production at Millaz Production Company runs smoothly from inception to curtain call.",
-      profile_url:
-        "/assets/portrait-cute-african-american-curly-young-woman-studio.jpg",
-    },
-    {
-      names: "Mr David Lee",
-      title: "Lead Set Designer",
-      profile:
-        "David is a talented set designer known for his innovative approach and ability to transform creative visions into captivating stage environments. With a degree in theatrical design and years of hands-on experience, he collaborates closely with directors and producers to bring their concepts to life.",
-      profile_url: "/assets/handsome-adult-male-posing.jpg",
-    },
-    {
-      names: "Mrs Emily Johnson",
-      title: "Marketing and Communications Manager",
-      profile:
-        "Emily is a dynamic marketing professional with a specialization in the arts and entertainment industry. She brings a strategic mindset and creative flair to Millaz Production Company, overseeing all aspects of marketing campaigns and communications strategies.",
-      profile_url: "/assets/front-view-smiley-woman-posing.jpg",
-    },
-    {
-      names: "Mr Michael Thompson",
-      title: "Technical Director",
-      profile:
-        "Michael is an experienced technical director with a passion for the seamless integration of sound, lighting, and special effects in live performances. With a background in technical theater and event production, he oversees the technical aspects of productions at Millaz Production Company",
-      profile_url: "/assets/close-up-smiley-man-with-glasses.jpg",
-    },
-    {
-      names: "Mrs Rachel Carter",
-      title: "Costume Designer",
-      profile:
-        "Rachel is a versatile costume designer known for her ability to evoke character and narrative through wardrobe choices. With a background in fashion design and costume history, she collaborates closely with directors and actors to develop costumes that enhance storytelling and character development on stage.",
-      profile_url: "/assets/beautiful-afro-american-woman-smiling.jpg",
-    },
-  ];
+
 
   return (
     <div>
@@ -138,7 +57,7 @@ const About = () => {
             src="/assets/HDKC8377.JPG"
             alt="actors on stage"
             fill
-            className="absolute object-cover rounded-tl-[40px] rounded-br-[40px]"
+            className="absolute object-cover rounded-tl-[20px] rounded-br-[20px]"
           />
         </div>
       </div>
