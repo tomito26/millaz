@@ -32,7 +32,7 @@ const About = () => {
       <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 my-16 flex md:flex-row flex-col justify-between items-center gap-5">
         <div className="lg:w-6/12 w-full">
           <h2 className="text-2xl md:text-4xl text-monochrome font-bold mb-3">
-            Who <span className="text-warning-dark">We Are</span>
+            Our <span className="text-warning-dark">Story</span>
           </h2>
           <p className="text-tundora text-sm md:text-base mb-4">
             Millaz Productions Kenya started of as Millers Productions Kenya in

@@ -54,10 +54,20 @@ const Home = () => {
         </div>
       </div>
       <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-16 flex justify-between flex-col md:flex-row px-4 gap-5">
-        <div className="w-full md:w-6/12">
-          <h2 className="md:text-4xl text-2xl text-monochrome font-bold mb-3">
+      <div className="lg:w-6/12 w-full">
+          <h2 className="text-2xl md:text-4xl text-monochrome font-bold mb-3">
             Who <span className="text-warning-dark">We Are</span>
           </h2>
+          <p className="text-tundora text-sm md:text-base mb-4">
+            Millaz Productions Kenya started of as Millers Productions Kenya in
+            2016 but had to undergo a name change in 2018 in respect to
+            registration logistics. An idea crafted by Senator Cleophas Malala
+            and Xavier Jerry Nato, the two thespians had the idea to revive a
+            theatre company they had back in 2008, Next Level productions, but
+            give it a new name. Xavier embarked in a recruiting exercise and
+            settled on the name Millers, a name coined by Allan Lumumba and
+            Emmanuel Chindia.
+          </p>
           <p className="text-tundora text-sm md:text-base mb-4">
             We are a passionate and dedicated team of artists and professionals
             committed to bringing high-quality, engaging stage productions to
@@ -65,16 +75,8 @@ const Home = () => {
             arts, our mission is to create unforgettable experiences that
             inspire, entertain, and connect people from diverse backgrounds.
           </p>
-          <p className="text-tundora text-sm md:text-base">
-            With a rich history of producing innovative and critically acclaimed
-            shows, we are driven by a desire to push the boundaries of
-            storytelling and to provide a platform for emerging and established
-            talent alike. Our productions are carefully crafted to showcase the
-            best of local and international talent, blending traditional and
-            contemporary styles to create unique and captivating performances.
-          </p>
         </div>
-        <div className="relative md:h-[300px] h-[240px] w-full md:w-[560px] rounded ">
+        <div className="relative md:h-[400px] h-[230px] w-full md:w-[560px] rounded-xl">
           <Image
             src="/assets/HDKC8377.JPG"
             alt="actors on stage"
