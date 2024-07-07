@@ -7,24 +7,24 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-warning-dark py-20">
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]">
-        <div className="flex justify-between gap-[20]">
-          <div className="w-[500px]">
-            <h3 className="text-white font-semibold mb-4">
+    <footer className="flex flex-col bg-warning-dark mt-28 py-20">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4">
+        <div className="flex flex-col md:flex-row justify-between gap-[20px]">
+          <div className="w-full md:w-[500px]">
+            <h3 className="text-white md:text-xl text-lg font-semibold mb-2">
               Millaz Productions Kenya
             </h3>
-            <p className="text-white text-base">
+            <p className="text-white text-sm md:text-base">
               Millaz Production Kenya is a theater company dedicated to bringing
               captivating stories to life through innovative stage performances.
             </p>
           </div>
           <div className="">
-            <h4 className="text-lg font-medium text-white">Quick Links</h4>
+            <h4 className="md:text-lg text-base font-medium text-white">Quick Links</h4>
             <ul>
               {navLinks.map((link) => (
                 <li key={link.title}>
-                  <Link className="text-base text-white" href={link.link}>
+                  <Link className="md:text-base text-sm text-white" href={link.link}>
                     {link.title}
                   </Link>
                 </li>
@@ -33,28 +33,28 @@ const Footer = () => {
           </div>
           <div className="">
             <div className="flex items-center">
-              <Phone className="mr-3 h-6 w-6 stroke-white" />
+              <Phone className="mr-3 md:h-6 md:w-6 h-5 w-5 stroke-white" />
               <div>
-                <p className="text-base text-white font-medium">
+                <p className="text-sm md:text-base text-white font-medium">
                   Main Support Line
                 </p>
-                <p className="underline text-white">+254701698534</p>
+                <p className="underline text-sm md:text-base text-white">+254701698534</p>
               </div>
             </div>
             <div className="flex items-center mt-6">
-              <Mail className="h-6 w-6 mr-3 stroke-white" />
+              <Mail className="md:h-6 md:w-6 h-5 w-5 mr-3 stroke-white" />
               <div>
-                <p className="text-base text-white font-medium">
+                <p className="text-sm md:text-base text-white font-medium">
                   General Enquiries
                 </p>
-                <p className="underline text-white">clarewahome@gmail.com</p>
+                <p className="underline text-sm md:text-base text-white">clarewahome@gmail.com</p>
               </div>
             </div>
           </div>
         </div>
         <div className="border border-white my-6" />
         <div>
-          <p className="text-white text-base">
+          <p className="text-white text-sm md:text-base">
             Copyright © 2024 Millaz Production Kenya® | All rights reserved
           </p>
           <div>
