@@ -1,5 +1,6 @@
 "use client";
 import {
+  articles,
   galleries,
   our_services,
   productions,
@@ -15,32 +16,6 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Home = () => {
-  const articles = [
-    {
-      id: "1",
-      title: "Jaboya: Radical wisdom emerges from the fish for sex trade",
-      blog_content: `Jaboya is Dhuluo, meaning “fish for sex” and it's a form of gendered trade that is commonly used to describe what happens every day when the fisherman at Lake Victoria come back to land and find scores of women waiting to sell themselves for fish.“It's a function of poverty and lack of choices,” the "BD Life" is told by Kathy Tate-Bradish, an HIV educator who works in Western Kenya. “It's the major factor resulting in the counties along the lake having the highest prevalence of HIV in Kenya,” she adds.To best understand the meaning of Jaboya, one needed to be at Kenya National Theatre recently to watch Millaz Players’ performance of Jaboya. Scripted by Emmanuel Chindia, the play captured the vibrant, sensual energy that swells the shore every time men come in with their catch of the day. That's when women scramble to be first in line since the transactions involve both money and fish for sex freely exchanged.`,
-      image: "/assets/HDNJ6031.JPG",
-    },
-    {
-      id: "2",
-      title: "Dark backstreet stories that pass no judgment",
-      blog_content: `Clare Wahome has been wearing many hats these days. The CEO of one of Nairobi's finest theatre groups, Millaz Productions, is also an actress in her own right. She is currently in rehearsal to co-star with Ben Tekee in Fred Mbogo's gripping drama, ' 'The Dead need no Shoes' which is coming to Kenya National Theatre on May 26.Scripted by Emmanuel Chindla and Saumu Kombo who also directed the play, Clare played Sarah, a young lawyer in mourning with her friends over the tragic demise of her former lover, Justin (Ken Aswani). Their meeting ground is Kares bar where Sarah refuses drinks while her banker friend Ude (Terry Munyeria) chooses to drown her grief by drinking vodka as if it were water. She’s advised against her indulgence by Freddie (Francis Ouma) who we discover late in the play has been having a covert romantic rendezvous that he's been keeping under wraps even among his bar friends.`,
-      image: "/assets/CGPA1495.JPG",
-    },
-    {
-      id: "3",
-      title: "Year of musicals as Kenyan theatre feted",
-      blog_content: `As the country cowered under uncertainty caused by Covid-19 in 2021, the musical theatre saw a resurgence as seen in this years Kenya Theatre Awards.The Awards held on Thursday saw KCA University's Simba Bazenga emerge as the Best Production, fighting for honours with another musical, Subira.`,
-      image: "/assets/AUGE8862.JPG",
-    },
-    {
-      id: "3",
-      title: "Year of musicals as Kenyan theatre feted",
-      blog_content: `As the country cowered under uncertainty caused by Covid-19 in 2021, the musical theatre saw a resurgence as seen in this years Kenya Theatre Awards.The Awards held on Thursday saw KCA University's Simba Bazenga emerge as the Best Production, fighting for honours with another musical, Subira.`,
-      image: "/assets/AUGE8862.JPG",
-    },
-  ];
 
   return (
     <div className="w-full">
@@ -292,8 +267,8 @@ const Home = () => {
             See more articles
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-          {articles.map((article) => (
+        <div className="grid grid-cols-1  lg:grid-cols-3 2xl:grid-cols-4 gap-5">
+          {articles.slice(0,4).map((article) => (
             <div
               key={article.id}
               className=" w-full border rounded-b-md shadow-sm"
@@ -307,7 +282,7 @@ const Home = () => {
                 />
               </div>
               <div className="px-4 py-4">
-                <h3 className="text-lg text-monochrome font-bold break-all">
+                <h3 className="text-lg text-monochrome font-bold">
                   {article && article.title.length > 60
                     ? `${article.title.substring(0, 60)}...`
                     : article.title}
@@ -317,10 +292,12 @@ const Home = () => {
                     ? `${article.blog_content.substring(0, 100)}...`
                     : ""}
                 </p>
-                <button className="flex text-sm md:text-base text-tundora gap-2 items-center mt-3">
+                <Link href={article.article_url}>
+                <button className="flex text-sm hover:underline  text-warning-dark gap-2 items-center mt-3">
                   Read more
-                <ArrowRight className="h-4 w-4"/>
+                <ArrowRight className="h-4 w-4 stroke-warning-dark"/>
                 </button>
+                </Link>
               </div>
             </div>
           ))}

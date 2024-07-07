@@ -21,7 +21,7 @@ const About = () => {
         className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
       >
         <div>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">About</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">About Us</h1>
           <p className="max-w-3xl text-white text-sm md:text-base">
             We are proud to be part of the vibrant Nairobi theatre scene,
             bringing world-class productions to the Kenya National Theatre and

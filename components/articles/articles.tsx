@@ -57,7 +57,7 @@ const Articles = () => {
                     : ""}
                 </p>
                 <Link href={article.article_url}>
-                  <button className="flex text-sm  text-warning-dark gap-2 items-center mt-3">
+                  <button className="flex text-sm hover:underline text-warning-dark gap-2 items-center mt-3">
                     Read more
                     <ArrowRight className="h-4 w-4 stroke-warning-dark" />
                   </button>
