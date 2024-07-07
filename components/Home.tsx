@@ -165,7 +165,7 @@ const Home = () => {
                   <h3 className="font-bold text-base text-tundora">
                     {service.title}
                   </h3>
-                  <p className="text-tundora text-base font-normal break-all">
+                  <p className="text-tundora text-base font-normal">
                     {service.description}
                   </p>
                 </div>
