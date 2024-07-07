@@ -220,3 +220,109 @@ export const galleries = [
     path: "/assets/image00045.jpeg",
   },
 ];
+
+export   const articles = [
+  {
+    id: "1",
+    title: "Jaboya: Radical wisdom emerges from the fish for sex trade",
+    blog_content: `Jaboya is Dhuluo, meaning “fish for sex” and it's a form of gendered trade that is commonly used to describe what happens every day when the fisherman at Lake Victoria come back to land and find scores of women waiting to sell themselves for fish.“It's a function of poverty and lack of choices,” the "BD Life" is told by Kathy Tate-Bradish, an HIV educator who works in Western Kenya. “It's the major factor resulting in the counties along the lake having the highest prevalence of HIV in Kenya,” she adds.To best understand the meaning of Jaboya, one needed to be at Kenya National Theatre recently to watch Millaz Players’ performance of Jaboya. Scripted by Emmanuel Chindia, the play captured the vibrant, sensual energy that swells the shore every time men come in with their catch of the day. That's when women scramble to be first in line since the transactions involve both money and fish for sex freely exchanged.`,
+    image: "/assets/HDNJ6031.JPG",
+    article_url:
+      "https://www.businessdailyafrica.com/bd/lifestyle/art/jaboya-radical-wisdom-emerges-from-the-fish-for-sex-trade--4503362",
+  },
+  {
+    id: "2",
+    title: "Dark backstreet stories that pass no judgment",
+    blog_content: `Clare Wahome has been wearing many hats these days. The CEO of one of Nairobi's finest theatre groups, Millaz Productions, is also an actress in her own right. She is currently in rehearsal to co-star with Ben Tekee in Fred Mbogo's gripping drama, ' 'The Dead need no Shoes' which is coming to Kenya National Theatre on May 26.Scripted by Emmanuel Chindla and Saumu Kombo who also directed the play, Clare played Sarah, a young lawyer in mourning with her friends over the tragic demise of her former lover, Justin (Ken Aswani). Their meeting ground is Kares bar where Sarah refuses drinks while her banker friend Ude (Terry Munyeria) chooses to drown her grief by drinking vodka as if it were water. She’s advised against her indulgence by Freddie (Francis Ouma) who we discover late in the play has been having a covert romantic rendezvous that he's been keeping under wraps even among his bar friends.`,
+    image: "/assets/CGPA1495.JPG",
+    article_url:
+      "https://www.businessdailyafrica.com/bd/lifestyle/art/dark-backstreet-stories-that-pass-no-judgment-3818746",
+  },
+  {
+    id: "3",
+    title: "Year of musicals as Kenyan theatre feted",
+    blog_content: `As the country cowered under uncertainty caused by Covid-19 in 2021, the musical theatre saw a resurgence as seen in this years Kenya Theatre Awards.The Awards held on Thursday saw KCA University's Simba Bazenga emerge as the Best Production, fighting for honours with another musical, Subira.`,
+    image: "/assets/ETQS4114.JPG",
+    article_url: "",
+  },
+  {
+    id: "4",
+    title: "Millaz Theatre Company explores timely mental health issues",
+    blog_content: `Millaz Theatre Company is one of the most successful community theatre troupes in Nairobi.That is why, when they understood that May was Mental Health Month, the company's playwright in residence, Saumu Combo, volunteered to script a play entitled, "Backstreet Edition 2" , filled with issues relevant to the theme so they could stage it last weekend at Kenya Cultural Centre (since the National Theatre is still under renovation) under the direction of Faiz Ouma. `,
+    image: "/assets/EZTB8559.JPG",
+    article_url:
+      "https://www.businessdailyafrica.com/bd/lifestyle/art/millaz-theatre-company-explores-timely-mental-health-issues-4625406",
+  },
+  {
+    id: "5",
+    title: "Doing the dirty work to clean up after big bad guys",
+    blog_content: `The Three Washkateers  is a generous mix of lyrical poetry and violent prose.It's also a satire on Kenya's contemporary cultural and political climate which includes a big chunk of supercharged chaos and corruption taken to its logical extreme.`,
+    image: "/assets/EAZN1038.JPG",
+    article_url:
+      "https://www.businessdailyafrica.com/bd/lifestyle/art/doing-the-dirty-work-to-clean-up-after-big-bad-guys--4325188",
+  },
+  {
+    id: "6",
+    title: "Political Satire Sets the Bar High for Millaz Productions",
+    blog_content: `Punchline after punchline, roast after roast, Millaz Productions' The Three Washkerteers lived up to the company's reputation showcasing what most would say is their best comedic piece yet.`,
+    image: "/assets/EAZN1038.JPG",
+    article_url:
+      "https://news.sanaapost.com/political-satire-sets-the-bar-high-for-millaz-productions/",
+  },
+  {
+    id: "7",
+    title: "Millaz's first murder mystery takes cues from Agatha Christie",
+    blog_content: `One thing that's most laudable about Millaz Productions is that they give young people a chance to take on challenging roles, like director and playwright, roles that tend to be occupied by older guys, not younger girls.`,
+    image: "/assets/EAZN1038.JPG",
+    article_url:
+      "https://www.businessdailyafrica.com/bd/lifestyle/art/millaz-s-first-murder-mystery-takes-cues-from-agatha-christie-4236272",
+  },
+  {
+    id: "8",
+    title: "'Deno Says He's Dead' …and probably he's right",
+    blog_content: `Deno Says He's Dead, a theatre performance, got big laughs this past weekend at Kenya National Theatre where Millaz Productions presented their retelling of the tale originally fashioned by British playwright Ray Cooney in 1982.`,
+    image: "/assets/millazday1-1358.jpg",
+    article_url:
+      "https://www.businessdailyafrica.com/bd/lifestyle/art/-deno-says-he-s-dead-and-probably-hes-right-3934142",
+  },
+  {
+    id: "9",
+    title: "KENYA THEATRE AWARDS 2022 - COMPLETE WINNERS LIST",
+    blog_content: `The inaugural Kenya Theatre Awards (KTA) ceremony took place on Thursday 17th February 2022. The glamorous black-and-gold themed event was held at the Kenya National Theatre (KNT).  The big winners of the night included Nick Ndeda, Wakio Mzenge, Nice Githinji, Liquid Arts Entertainment, KCA University and Millaz Productions. The most feted shows included Subira (the Musical), Blackout, Breathe III and Simba Bazenga (the Musical).`,
+    image: "/assets/1I4A1746-scaled-1280x640.jpg",
+    article_url:
+      "https://thetheatretimes.com/kenya-theatre-awards-2022-complete-winners-list/?fbclid=IwAR0kYRMxZ8eLuUT57Ld_yjoTp-Oh6EwZo1SQI14DDTcnt9W7kmV_rz0cyL0",
+  },
+  {
+    id: "10",
+    title: "'Black Out' is timely, troubling but funny",
+    blog_content: `The inaugural Kenya Theatre Awards (KTA) ceremony took place on Thursday 17th February 2022. The glamorous black-and-gold themed event was held at the Kenya National Theatre (KNT).  The big winners of the night included Nick Ndeda, Wakio Mzenge, Nice Githinji, Liquid Arts Entertainment, KCA University and Millaz Productions. The most feted shows included Subira (the Musical), Blackout, Breathe III and Simba Bazenga (the Musical).`,
+    image: "/assets/GPZK2687.JPG",
+    article_url:
+      "https://thetheatretimes.com/kenya-theatre-awards-2022-complete-winners-list/?fbclid=IwAR0kYRMxZ8eLuUT57Ld_yjoTp-Oh6EwZo1SQI14DDTcnt9W7kmV_rz0cyL0",
+  },
+  {
+    id: "11",
+    title: "'SON OF AGICH' EXPOSES CHURCH CON-MEN VIA COMEDY",
+    blog_content:
+      "Corruption seems to permeate all facets of Kenyan society, which is why it has become such fertile ground for so many local scriptwriters to dig into and come up with remarkably relevant plays.The latest one is Millaz Productions' of 'Son of Agich' which Xavier Nato wrote and calls a comedy. The award-winning producer-director-playwright hesitates to call his script a satire but that's because the show is indeed amusing from the word go.",
+    image: "/assets/image00038.jpeg",
+    article_url: "",
+  },
+  {
+    id: "12",
+    title: "Culture clash plays out as women fight back",
+    blog_content:
+      "It's never easy to stage a play, leave alone a musical, which is set in rural Africa without the tale looking slightly contrived. But Millaz Production managed to do it with Razor, the remarkable play scripted by Justin Ong'wen, directed by Xavier NATO and staged last weekend at Kenya National Theatre.",
+    image: "/assets/CEBL8273.JPG",
+    article_url: "https://www.businessdailyafrica.com/lifestyle/art/Culture-clash-plays-out-as-women-fight-back/3815712-5253488-bnosjn/index.html",
+  },
+  {
+    id: "13",
+    title: "Young script writers map out violence on the stage",
+    blog_content:
+      "There's a new generation of scriptwriters at Millaz Production, prepared to speak out bluntly, frankly, even ferociously about injustices they have witnessed in Kenyan society.",
+    image: "/assets/GIIZ9316.JPG",
+    article_url: "https://www.businessdailyafrica.com/bd/lifestyle/art/young-script-writers-map-out-violence-stage-3655554",
+  },
+];

@@ -38,7 +38,7 @@ const Navbar = () => {
         >
           {navLinks.map((link) => (
             <li key={link.title} className="md:mr-8 my-4 md:my-0">
-              <Link href={link.link} className="text-black md:text-white block" onClick={toggleMenu}>
+              <Link href={link.link} className="text-black md:text-white block hover:text-warning-dark" onClick={toggleMenu}>
                 {link.title}
               </Link>
             </li>
