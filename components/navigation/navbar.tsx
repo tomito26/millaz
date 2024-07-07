@@ -5,10 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname()
+  console.log(pathname)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -38,7 +41,7 @@ const Navbar = () => {
         >
           {navLinks.map((link) => (
             <li key={link.title} className="md:mr-8 my-4 md:my-0">
-              <Link href={link.link} className="text-black md:text-white block hover:text-warning-dark" onClick={toggleMenu}>
+              <Link href={link.link} className={cn(pathname === link.link ? "text-warning-dark" : "text-black text-sm md:text-white"," block hover:text-warning-dark")} onClick={toggleMenu}>
                 {link.title}
               </Link>
             </li>
