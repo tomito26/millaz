@@ -5,7 +5,7 @@ import {
   productions,
   testimonials,
 } from "@/lib/constants";
-import { Quote } from "lucide-react";
+import { ArrowRight, Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import "swiper/css";
@@ -15,12 +15,30 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Home = () => {
-  const news_updates = [
+  const articles = [
     {
-      title: "Young script writers map out violence on the stage",
-      blog_content:
-        "There's a new generation of scriptwriters at Millaz Production, prepared to speak out bluntly, frankly, even ferociously about injustices they have witnessed in Kenyan society.Not that Xavier Nato, founder and chief playwright for the troupe was conservative by any means. But a play like 'I know rights'  is bound to shock a few Kenyans who have grown up knowing the wisdom or at least the tried-and-true survival tactic called self-censorship.There is no censoring of the youth's attitudes towards the cops in Millaz' stunning drama that premiered this past weekend at Kenya Cultural Centre's Ukumbi Mdogo.Co-scripted by Brian Irungu and Saumu Kombo, 'I know My Rights'",
-      image: ""
+      id: "1",
+      title: "Jaboya: Radical wisdom emerges from the fish for sex trade",
+      blog_content: `Jaboya is Dhuluo, meaning “fish for sex” and it's a form of gendered trade that is commonly used to describe what happens every day when the fisherman at Lake Victoria come back to land and find scores of women waiting to sell themselves for fish.“It's a function of poverty and lack of choices,” the "BD Life" is told by Kathy Tate-Bradish, an HIV educator who works in Western Kenya. “It's the major factor resulting in the counties along the lake having the highest prevalence of HIV in Kenya,” she adds.To best understand the meaning of Jaboya, one needed to be at Kenya National Theatre recently to watch Millaz Players’ performance of Jaboya. Scripted by Emmanuel Chindia, the play captured the vibrant, sensual energy that swells the shore every time men come in with their catch of the day. That's when women scramble to be first in line since the transactions involve both money and fish for sex freely exchanged.`,
+      image: "/assets/HDNJ6031.JPG",
+    },
+    {
+      id: "2",
+      title: "Dark backstreet stories that pass no judgment",
+      blog_content: `Clare Wahome has been wearing many hats these days. The CEO of one of Nairobi's finest theatre groups, Millaz Productions, is also an actress in her own right. She is currently in rehearsal to co-star with Ben Tekee in Fred Mbogo's gripping drama, ' 'The Dead need no Shoes' which is coming to Kenya National Theatre on May 26.Scripted by Emmanuel Chindla and Saumu Kombo who also directed the play, Clare played Sarah, a young lawyer in mourning with her friends over the tragic demise of her former lover, Justin (Ken Aswani). Their meeting ground is Kares bar where Sarah refuses drinks while her banker friend Ude (Terry Munyeria) chooses to drown her grief by drinking vodka as if it were water. She’s advised against her indulgence by Freddie (Francis Ouma) who we discover late in the play has been having a covert romantic rendezvous that he's been keeping under wraps even among his bar friends.`,
+      image: "/assets/CGPA1495.JPG",
+    },
+    {
+      id: "3",
+      title: "Year of musicals as Kenyan theatre feted",
+      blog_content: `As the country cowered under uncertainty caused by Covid-19 in 2021, the musical theatre saw a resurgence as seen in this years Kenya Theatre Awards.The Awards held on Thursday saw KCA University's Simba Bazenga emerge as the Best Production, fighting for honours with another musical, Subira.`,
+      image: "/assets/AUGE8862.JPG",
+    },
+    {
+      id: "3",
+      title: "Year of musicals as Kenyan theatre feted",
+      blog_content: `As the country cowered under uncertainty caused by Covid-19 in 2021, the musical theatre saw a resurgence as seen in this years Kenya Theatre Awards.The Awards held on Thursday saw KCA University's Simba Bazenga emerge as the Best Production, fighting for honours with another musical, Subira.`,
+      image: "/assets/AUGE8862.JPG",
     },
   ];
 
@@ -246,11 +264,11 @@ const Home = () => {
         <h1 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
           Our <span className="text-warning-dark">Galleries</span>
         </h1>
-        <div className="flex flex-wrap gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {galleries.map((gallery) => (
             <div
               key={gallery.id}
-              className="h-[240px] w-full md:w-[360px] xl:h-[300px] xl:w-[360px] 2xl:w-[350px] 3xl:w-[450px] rounded-md relative"
+              className="h-[240px] w-full  xl:h-[300px] rounded-md relative"
             >
               <Image
                 src={gallery.path}
@@ -258,6 +276,52 @@ const Home = () => {
                 alt="millaz"
                 className="absolute object-cover rounded-md"
               />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]  px-4 ">
+        <div className="flex justify-between">
+          <h1 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
+            Featured <span className="text-warning-dark">Articles</span>
+          </h1>
+          <Link
+            href="/featured-articles"
+            className="text-base text-warning-dark hidden md:inline-block font-medium"
+          >
+            See more articles
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+          {articles.map((article) => (
+            <div
+              key={article.id}
+              className=" w-full border rounded-b-md shadow-sm"
+            >
+              <div className="w-full h-[240px] rounded-md relative">
+                <Image
+                  src={article.image}
+                  fill
+                  alt="millaz"
+                  className="absolute object-cover rounded-t-md"
+                />
+              </div>
+              <div className="px-4 py-4">
+                <h3 className="text-lg text-monochrome font-bold break-all">
+                  {article && article.title.length > 80
+                    ? `${article.title.substring(0, 80)}...`
+                    : article.title}
+                </h3>
+                <p className="text-tundora text-sm md:text-base mt-2">
+                  {article && article.blog_content.length > 100
+                    ? `${article.blog_content.substring(0, 100)}...`
+                    : ""}
+                </p>
+                <button className="flex text-sm md:text-base text-tundora gap-2 items-center mt-3">
+                  Read more
+                <ArrowRight className="h-4 w-4"/>
+                </button>
+              </div>
             </div>
           ))}
         </div>
