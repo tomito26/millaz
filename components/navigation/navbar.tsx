@@ -11,8 +11,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname()
-  console.log(pathname)
-
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
