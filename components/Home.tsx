@@ -58,21 +58,19 @@ const Home = () => {
             Who <span className="text-warning-dark">We Are</span>
           </h2>
           <p className="text-tundora text-sm md:text-base mb-4">
-            Millaz Productions Kenya started of as Millers Productions Kenya in
-            2016 but had to undergo a name change in 2018 in respect to
-            registration logistics. An idea crafted by Senator Cleophas Malala
-            and Xavier Jerry Nato, the two thespians had the idea to revive a
-            theatre company they had back in 2008, Next Level productions, but
-            give it a new name. Xavier embarked in a recruiting exercise and
-            settled on the name Millers, a name coined by Allan Lumumba and
-            Emmanuel Chindia.
-          </p>
-          <p className="text-tundora text-sm md:text-base mb-4">
             We are a passionate and dedicated team of artists and professionals
             committed to bringing high-quality, engaging stage productions to
             audiences of all ages. Founded on a deep love for the performing
             arts, our mission is to create unforgettable experiences that
             inspire, entertain, and connect people from diverse backgrounds.
+          </p>
+          <p className="text-tundora text-sm md:text-base">
+            With a rich history of producing innovative and critically acclaimed
+            shows, we are driven by a desire to push the boundaries of
+            storytelling and to provide a platform for emerging and established
+            talent alike. Our productions are carefully crafted to showcase the
+            best of local and international talent, blending traditional and
+            contemporary styles to create unique and captivating performances.
           </p>
         </div>
         <div className="relative md:h-[400px] h-[230px] w-full md:w-[560px] rounded-xl">
