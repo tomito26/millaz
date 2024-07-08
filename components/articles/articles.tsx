@@ -12,7 +12,7 @@ const Articles = () => {
         style={{
           backgroundImage:
             "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('/assets/EQGJ1018.JPG')",
-          height: "80vh",
+          height: "60vh",
           width: "100%",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -20,8 +20,8 @@ const Articles = () => {
         }}
         className="flex items-center   md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
       >
-        <div>
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
+        <div className="mt-12 md:mt-0">
+          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 md:mb-6">
             Featured Articles
           </h1>
           <p className="max-w-3xl text-white text-sm md:text-base">
