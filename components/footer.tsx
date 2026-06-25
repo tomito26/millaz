@@ -1,14 +1,7 @@
-import React from "react";
 import Image from "next/image";
 import { navLinks } from "@/lib/constants";
 import Link from "next/link";
-import { Mail, Phone, Facebook } from "lucide-react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
+import { Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -69,7 +62,7 @@ const Footer = () => {
         <div className="border border-white my-6" />
         <div className="flex md:flex-row flex-col justify-between items-center gap-6">
           <p className="text-white text-sm md:text-base">
-            Copyright © 2024 Millaz Production Kenya® | All rights reserved
+            Copyright © {new Date().getFullYear()} Millaz Production Kenya® | All rights reserved
           </p>
           <div className="flex gap-5">
             <div className="h-10 w-10">

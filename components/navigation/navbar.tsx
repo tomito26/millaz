@@ -52,7 +52,7 @@ const Navbar = () => {
                     : "text-black md:text-white",
                   "block hover:text-warning-dark"
                 )}
-                onClick={toggleMenu}
+                onClick={() => { if (isOpen) toggleMenu(); }}
               >
                 {link.title}
               </Link>
