@@ -46,9 +46,11 @@ const Home = () => {
                 Find out more
               </button>
             </Link>
-            <button className="text-white py-2.5 px-5 md:px-8 border-white border-2 rounded-md text-sm md:text-base hover:bg-white hover:text-warning-dark font-medium">
-              Our Shows
-            </button>
+            <Link href="/our-productions">
+              <button className="text-white py-2.5 px-5 md:px-8 border-white border-2 rounded-md text-sm md:text-base hover:bg-white hover:text-warning-dark font-medium">
+                Our Shows
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -82,7 +84,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="md:px-[60px] xl-px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 my-24">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 my-24">
         <h2 className="text-2xl md:text-4xl font-bold  text-monochrome mb-8">
           Upcoming <span className="text-warning-dark">Productions</span>
         </h2>
@@ -118,14 +120,16 @@ const Home = () => {
                     })}
                   </span>
                 </p>
-                <p className="text-sm text-tundora break-all mb-5">
+                <p className="text-sm text-tundora break-words mb-5">
                   {production.description.length > 100
                     ? `${production.description.substring(0, 200)}...`
                     : production.description}
                 </p>
-                <button className="bg-dark-green py-2.5 px-8 text-base text-white rounded-md hover:bg-dark-green/85 font-medium">
-                  Buy Ticket
-                </button>
+                <Link href="/our-productions">
+                  <button className="bg-dark-green py-2.5 px-8 text-base text-white rounded-md hover:bg-dark-green/85 font-medium">
+                    Buy Ticket
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -235,9 +239,9 @@ const Home = () => {
         </div>
       </div>
       <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] py-16 px-4">
-        <h1 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
+        <h2 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
           Our <span className="text-warning-dark">Galleries</span>
-        </h1>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {galleries.map((gallery) => (
             <div
@@ -256,9 +260,9 @@ const Home = () => {
       </div>
       <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]  px-4 ">
         <div className="flex justify-between">
-          <h1 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
             Featured <span className="text-warning-dark">Articles</span>
-          </h1>
+          </h2>
           <Link
             href="/featured-articles"
             className="text-base text-warning-dark hidden md:inline-block font-medium"
@@ -286,17 +290,19 @@ const Home = () => {
                     ? `${article.title.substring(0, 60)}...`
                     : article.title}
                 </h3>
-                <p className="text-tundora text-sm md:text-base mt-2 break-all">
+                <p className="text-tundora text-sm md:text-base mt-2 break-words">
                   {article && article.blog_content.length > 100
                     ? `${article.blog_content.substring(0, 100)}...`
                     : ""}
                 </p>
-                <Link href={article.article_url}>
-                <button className="flex text-sm hover:underline  text-warning-dark gap-2 items-center mt-3">
-                  Read more
-                <ArrowRight className="h-4 w-4 stroke-warning-dark"/>
-                </button>
-                </Link>
+                {article.article_url && (
+                  <Link href={article.article_url} target="_blank" rel="noopener noreferrer">
+                    <button className="flex text-sm hover:underline text-warning-dark gap-2 items-center mt-3">
+                      Read more
+                      <ArrowRight className="h-4 w-4 stroke-warning-dark"/>
+                    </button>
+                  </Link>
+                )}
               </div>
             </div>
           ))}

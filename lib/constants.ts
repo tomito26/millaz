@@ -296,10 +296,9 @@ export   const articles = [
   {
     id: "10",
     title: "'Black Out' is timely, troubling but funny",
-    blog_content: `The inaugural Kenya Theatre Awards (KTA) ceremony took place on Thursday 17th February 2022. The glamorous black-and-gold themed event was held at the Kenya National Theatre (KNT).  The big winners of the night included Nick Ndeda, Wakio Mzenge, Nice Githinji, Liquid Arts Entertainment, KCA University and Millaz Productions. The most feted shows included Subira (the Musical), Blackout, Breathe III and Simba Bazenga (the Musical).`,
+    blog_content: `Millaz Productions' Blackout is a timely and thought-provoking piece that tackles power, corruption, and the everyday struggles of Kenyans. The play weaves together dark comedy and sharp social commentary, keeping audiences both laughing and unsettled in equal measure.`,
     image: "/assets/GPZK2687.JPG",
-    article_url:
-      "https://thetheatretimes.com/kenya-theatre-awards-2022-complete-winners-list/?fbclid=IwAR0kYRMxZ8eLuUT57Ld_yjoTp-Oh6EwZo1SQI14DDTcnt9W7kmV_rz0cyL0",
+    article_url: "",
   },
   {
     id: "11",
