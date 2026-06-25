@@ -2,18 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { navLinks } from "@/lib/constants";
 import Link from "next/link";
-import { Mail, Phone, Facebook } from "lucide-react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
+import { Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-warning-dark mt-28 py-20">
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4">
+      <div className="px-4 md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]">
         <div className="flex flex-col md:flex-row justify-between gap-[20px]">
           <div className="w-full md:w-[500px]">
             <h3 className="text-white md:text-xl text-lg font-semibold mb-2">
@@ -69,7 +63,7 @@ const Footer = () => {
         <div className="border border-white my-6" />
         <div className="flex md:flex-row flex-col justify-between items-center gap-6">
           <p className="text-white text-sm md:text-base">
-            Copyright © 2024 Millaz Production Kenya® | All rights reserved
+            Copyright &copy; {new Date().getFullYear()} Millaz Production Kenya&reg; | All rights reserved
           </p>
           <div className="flex gap-5">
             <div className="h-10 w-10">
@@ -80,6 +74,7 @@ const Footer = () => {
                   height="47"
                   viewBox="0 0 46 47"
                   fill="none"
+                  aria-label="Facebook"
                 >
                   <circle
                     opacity="0.1"
@@ -104,6 +99,7 @@ const Footer = () => {
                   height="47"
                   viewBox="0 0 46 47"
                   fill="none"
+                  aria-label="Instagram"
                 >
                   <circle
                     opacity="0.1"
@@ -112,7 +108,6 @@ const Footer = () => {
                     r="21.5"
                     stroke="#FFF"
                     strokeWidth="3"
-                    className="hover:stroke"
                   />
                   <path
                     d="M30.4918 20.1777C30.4559 19.3642 30.3243 18.8049 30.1359 18.3203C29.9415 17.8058 29.6424 17.3453 29.2505 16.9624C28.8676 16.5736 28.404 16.2714 27.8956 16.0801C27.4081 15.8916 26.8517 15.76 26.0382 15.7242C25.2186 15.6853 24.9584 15.6763 22.8796 15.6763C20.8009 15.6763 20.5407 15.6853 19.7241 15.7211C18.9106 15.757 18.3513 15.8887 17.8668 16.077C17.3522 16.2714 16.8917 16.5705 16.5088 16.9624C16.12 17.3453 15.8179 17.8089 15.6264 18.3174C15.438 18.8049 15.3064 19.3612 15.2706 20.1747C15.2317 20.9943 15.2227 21.2545 15.2227 23.3333C15.2227 25.412 15.2317 25.6722 15.2675 26.4888C15.3034 27.3023 15.4351 27.8616 15.6235 28.3462C15.8179 28.8607 16.12 29.3212 16.5088 29.7041C16.8917 30.0929 17.3553 30.3951 17.8637 30.5865C18.3513 30.7749 18.9076 30.9065 19.7212 30.9424C20.5377 30.9783 20.798 30.9872 22.8767 30.9872C24.9555 30.9872 25.2157 30.9783 26.0322 30.9424C26.8458 30.9065 27.4051 30.7749 27.8896 30.5865C28.9186 30.1886 29.7321 29.3751 30.1299 28.3462C30.3183 27.8587 30.4499 27.3023 30.4858 26.4888C30.5217 25.6722 30.5307 25.412 30.5307 23.3333C30.5307 21.2545 30.5276 20.9943 30.4918 20.1777ZM29.113 26.429C29.08 27.1767 28.9544 27.5805 28.8498 27.8497C28.5925 28.5167 28.0631 29.0461 27.3961 29.3034C27.1269 29.4081 26.7202 29.5337 25.9753 29.5665C25.1678 29.6025 24.9256 29.6114 22.8827 29.6114C20.8398 29.6114 20.5946 29.6025 19.7899 29.5665C19.0422 29.5337 18.6384 29.4081 18.3692 29.3034C18.0372 29.1807 17.7351 28.9863 17.4899 28.732C17.2356 28.4838 17.0412 28.1847 16.9185 27.8527C16.8139 27.5835 16.6883 27.1767 16.6554 26.432C16.6194 25.6244 16.6106 25.3821 16.6106 23.3392C16.6106 21.2963 16.6194 21.0511 16.6554 20.2466C16.6883 19.4988 16.8139 19.095 16.9185 18.8258C17.0412 18.4938 17.2356 18.1918 17.4929 17.9464C17.7411 17.6922 18.0402 17.4977 18.3722 17.3752C18.6414 17.2705 19.0482 17.1449 19.7929 17.112C20.6005 17.0761 20.8428 17.0671 22.8856 17.0671C24.9315 17.0671 25.1737 17.0761 25.9784 17.112C26.7261 17.1449 27.1299 17.2705 27.3991 17.3752C27.731 17.4977 28.0332 17.6922 28.2784 17.9464C28.5327 18.1947 28.7271 18.4938 28.8498 18.8258C28.9544 19.095 29.08 19.5017 29.113 20.2466C29.1489 21.0541 29.1579 21.2963 29.1579 23.3392C29.1579 25.3821 29.1489 25.6214 29.113 26.429Z"
@@ -137,6 +132,7 @@ const Footer = () => {
                   height="47"
                   viewBox="0 0 46 47"
                   fill="none"
+                  aria-label="X (Twitter)"
                 >
                   <circle
                     opacity="0.1"

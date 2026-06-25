@@ -14,11 +14,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import PageSection from "./ui/PageSection";
 
 const Home = () => {
-
   return (
     <div className="w-full">
+      {/* Hero */}
       <div
         style={{
           backgroundImage:
@@ -29,7 +30,7 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
+        className="flex items-center px-4 md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]"
       >
         <div>
           <h1 className="text-4xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
@@ -42,18 +43,22 @@ const Home = () => {
           </p>
           <div className="mt-6 space-x-6">
             <Link href="/about">
-              <button className="bg-warning-dark py-2.5 px-5 md:px-8  text-sm md:text-base text-white rounded-md hover:bg-warning-dark/85 font-medium">
+              <button className="bg-warning-dark py-2.5 px-5 md:px-8 text-sm md:text-base text-white rounded-md hover:bg-warning-dark/85 font-medium">
                 Find out more
               </button>
             </Link>
-            <button className="text-white py-2.5 px-5 md:px-8 border-white border-2 rounded-md text-sm md:text-base hover:bg-white hover:text-warning-dark font-medium">
-              Our Shows
-            </button>
+            <Link href="/our-productions">
+              <button className="text-white py-2.5 px-5 md:px-8 border-white border-2 rounded-md text-sm md:text-base hover:bg-white hover:text-warning-dark font-medium">
+                Our Shows
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-16 flex justify-between flex-col md:flex-row px-4 gap-5">
-      <div className="lg:w-6/12 w-full">
+
+      {/* Who We Are */}
+      <PageSection className="my-16 flex justify-between flex-col md:flex-row gap-5">
+        <div className="lg:w-6/12 w-full">
           <h2 className="text-2xl md:text-4xl text-monochrome font-bold mb-3">
             Who <span className="text-warning-dark">We Are</span>
           </h2>
@@ -76,14 +81,16 @@ const Home = () => {
         <div className="relative md:h-[400px] h-[230px] w-full md:w-[560px] rounded-xl">
           <Image
             src="/assets/HDKC8377.JPG"
-            alt="actors on stage"
+            alt="Millaz Productions cast on stage"
             fill
             className="absolute object-cover rounded-tl-[20px] rounded-br-[20px]"
           />
         </div>
-      </div>
-      <div className="md:px-[60px] xl-px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 my-24">
-        <h2 className="text-2xl md:text-4xl font-bold  text-monochrome mb-8">
+      </PageSection>
+
+      {/* Upcoming Productions */}
+      <PageSection className="my-24">
+        <h2 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
           Upcoming <span className="text-warning-dark">Productions</span>
         </h2>
         <div className="flex flex-col md:flex-row gap-10">
@@ -118,7 +125,7 @@ const Home = () => {
                     })}
                   </span>
                 </p>
-                <p className="text-sm text-tundora break-all mb-5">
+                <p className="text-sm text-tundora break-words mb-5">
                   {production.description.length > 100
                     ? `${production.description.substring(0, 200)}...`
                     : production.description}
@@ -130,19 +137,25 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </div>
+      </PageSection>
+
+      {/* Banner */}
       <div className="w-full bg-warning-dark py-12">
-        <p className="text-white text-base md:text-lg md:px-[60px] xl:px-[80px] 2xl:[100px] 3xl:px-[160px] px-4 text-center">
-          We are dedicated to bringing captivating stories to life through
-          innovative and memorable stage performances. Our passion for theater
-          drives us to create dynamic productions that resonate with audiences
-          of all ages. From classic tales to contemporary narratives, each of
-          our plays is crafted with artistic excellence and a commitment to
-          delivering unforgettable experiences.
-        </p>
+        <PageSection>
+          <p className="text-white text-base md:text-lg text-center">
+            We are dedicated to bringing captivating stories to life through
+            innovative and memorable stage performances. Our passion for theater
+            drives us to create dynamic productions that resonate with audiences
+            of all ages. From classic tales to contemporary narratives, each of
+            our plays is crafted with artistic excellence and a commitment to
+            delivering unforgettable experiences.
+          </p>
+        </PageSection>
       </div>
+
+      {/* What We Do */}
       <div className="bg-[#f1f1f1] py-16">
-        <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[200px] px-4">
+        <PageSection>
           <h2 className="text-2xl md:text-4xl font-bold text-monochrome mb-6">
             What <span className="text-warning-dark">We Do</span>
           </h2>
@@ -171,9 +184,11 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>
+        </PageSection>
       </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 py-16">
+
+      {/* Testimonials */}
+      <PageSection className="py-16">
         <h2 className="text-2xl md:text-4xl text-monochrome font-bold">
           Our Clients <span className="text-warning-dark">Testimonials</span>
         </h2>
@@ -187,18 +202,9 @@ const Home = () => {
             loop={true}
             autoplay={{ delay: 5000 }}
             breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-              },
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 30 },
+              1024: { slidesPerView: 3, spaceBetween: 40 },
             }}
           >
             {testimonials.map((testimony, index) => (
@@ -207,9 +213,9 @@ const Home = () => {
                   <div className="w-full xl:w-12/12 rounded-lg">
                     <div>
                       <p className="w-full text-gray mb-5 text-base">
-                        <Quote className="rotate-180 mb-px stroke-warning-dark  mr-2" />
+                        <Quote className="rotate-180 mb-px stroke-warning-dark mr-2" />
                         {testimony.testimony}
-                        <Quote className="stroke-warning-dark inline-block mt-px  ml-2" />
+                        <Quote className="stroke-warning-dark inline-block mt-px ml-2" />
                       </p>
                       <div className="flex justify-end">
                         <div className="flex justify-center items-center flex-col">
@@ -233,8 +239,10 @@ const Home = () => {
             ))}
           </Swiper>
         </div>
-      </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] py-16 px-4">
+      </PageSection>
+
+      {/* Gallery */}
+      <PageSection className="py-16">
         <h1 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
           Our <span className="text-warning-dark">Galleries</span>
         </h1>
@@ -242,19 +250,21 @@ const Home = () => {
           {galleries.map((gallery) => (
             <div
               key={gallery.id}
-              className="h-[240px] w-full  xl:h-[300px] rounded-md relative"
+              className="h-[240px] w-full xl:h-[300px] rounded-md relative"
             >
               <Image
                 src={gallery.path}
                 fill
-                alt="millaz"
+                alt={`Millaz Productions performance gallery image ${gallery.id}`}
                 className="absolute object-cover rounded-md"
               />
             </div>
           ))}
         </div>
-      </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]  px-4 ">
+      </PageSection>
+
+      {/* Featured Articles */}
+      <PageSection>
         <div className="flex justify-between">
           <h1 className="text-2xl md:text-4xl font-bold text-monochrome mb-8">
             Featured <span className="text-warning-dark">Articles</span>
@@ -266,42 +276,41 @@ const Home = () => {
             See more articles
           </Link>
         </div>
-        <div className="grid grid-cols-1  lg:grid-cols-3 2xl:grid-cols-4 gap-5">
-          {articles.slice(0,4).map((article) => (
-            <div
-              key={article.id}
-              className=" w-full border rounded-b-md shadow-sm"
-            >
+        <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-5">
+          {articles.slice(0, 4).map((article) => (
+            <div key={article.id} className="w-full border rounded-b-md shadow-sm">
               <div className="w-full h-[240px] rounded-md relative">
                 <Image
                   src={article.image}
                   fill
-                  alt="millaz"
+                  alt={article.title}
                   className="absolute object-cover rounded-t-md"
                 />
               </div>
               <div className="px-4 py-4">
                 <h3 className="text-lg text-monochrome font-bold">
-                  {article && article.title.length > 60
+                  {article.title.length > 60
                     ? `${article.title.substring(0, 60)}...`
                     : article.title}
                 </h3>
-                <p className="text-tundora text-sm md:text-base mt-2 break-all">
-                  {article && article.blog_content.length > 100
+                <p className="text-tundora text-sm md:text-base mt-2 break-words">
+                  {article.blog_content.length > 100
                     ? `${article.blog_content.substring(0, 100)}...`
                     : ""}
                 </p>
-                <Link href={article.article_url}>
-                <button className="flex text-sm hover:underline  text-warning-dark gap-2 items-center mt-3">
-                  Read more
-                <ArrowRight className="h-4 w-4 stroke-warning-dark"/>
-                </button>
-                </Link>
+                {article.article_url && (
+                  <Link href={article.article_url}>
+                    <button className="flex text-sm hover:underline text-warning-dark gap-2 items-center mt-3">
+                      Read more
+                      <ArrowRight className="h-4 w-4 stroke-warning-dark" />
+                    </button>
+                  </Link>
+                )}
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </PageSection>
     </div>
   );
 };

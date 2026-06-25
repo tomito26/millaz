@@ -1,4 +1,6 @@
-export const navLinks = [
+import type { Article, Gallery, NavLink, Production, Service, TeamMember, Testimonial, Value } from "./types";
+
+export const navLinks: NavLink[] = [
   {
     title: "Home",
     link: "/"
@@ -11,8 +13,9 @@ export const navLinks = [
     title: "Featured Articles",
     link: "/featured-articles"
   }
-]
-export const values = [
+];
+
+export const values: Value[] = [
   {
     title: "Artistic Excellence",
     description:
@@ -50,7 +53,8 @@ export const values = [
     path: "/assets/FIPU5747.JPG",
   },
 ];
-export const teams = [
+
+export const teams: TeamMember[] = [
   {
     names: "Mr James Miller",
     title: "Creative Director",
@@ -96,7 +100,7 @@ export const teams = [
   },
 ];
 
-export const productions = [
+export const productions: Production[] = [
   {
     id: 1,
     poster_url: "/assets/IMG-20240502-WA0001.jpg",
@@ -122,7 +126,8 @@ export const productions = [
     description: `Backstreet is a  play  delving into the intricate and often challenging world of mental health. The narrative centers around a close-knit group of friends, each grappling with their own personal battles and emotional struggles. Through a series of heartfelt and dramatic scenes, the play explores themes of friendship, resilience, and the often unspoken pain of mental illness. Set against the backdrop of everyday life in Kenya, "Backstreet" poignantly portrays how mental health issues can affect anyone, regardless of age, gender, or social status. The characters' journeys reflect a range of experiences, from anxiety and depression to more severe mental health conditions. As they navigate their struggles, the friends offer each other support, sometimes falteringly, sometimes with profound empathy, highlighting the importance of community and understanding. The production is both an artistic endeavor and a social commentary, aiming to raise awareness about mental health issues and destigmatize seeking help. Through powerful performances and a thoughtful script, "Backstreet" challenges audiences to reflect on their own perceptions of mental health and the ways in which they can support those around them.`,
   },
 ];
-export const our_services = [
+
+export const our_services: Service[] = [
   {
     id: 1,
     title: "Stage Performances",
@@ -152,7 +157,8 @@ export const our_services = [
       "We provide training programs designed to develop the skills and expertise of aspiring artists and professionals in the field.",
   },
 ];
-export const testimonials = [
+
+export const testimonials: Testimonial[] = [
   {
     id: 1,
     testimony:
@@ -182,50 +188,24 @@ export const testimonials = [
     image: "/assets/blank-profile-picture-973460_1280.png",
   },
 ];
-export const galleries = [
-  {
-    id: 1,
-    path: "/assets/ETQS4114.JPG",
-  },
-  {
-    id: 2,
-    path: "/assets/AUGE8862.JPG",
-  },
-  {
-    id: 3,
-    path: "/assets/BKUV0078.JPG",
-  },
-  {
-    id: 4,
-    path: "/assets/DSHR2544.JPG",
-  },
-  {
-    id: 5,
-    path: "/assets/DXJW2187.JPG",
-  },
-  {
-    id: 6,
-    path: "/assets/EKNL4154.JPG",
-  },
-  {
-    id: 7,
-    path: "/assets/FZSF4348.JPG",
-  },
-  {
-    id: 8,
-    path: "/assets/HKTD0173.JPG",
-  },
-  {
-    id: 9,
-    path: "/assets/image00045.jpeg",
-  },
+
+export const galleries: Gallery[] = [
+  { id: 1, path: "/assets/ETQS4114.JPG" },
+  { id: 2, path: "/assets/AUGE8862.JPG" },
+  { id: 3, path: "/assets/BKUV0078.JPG" },
+  { id: 4, path: "/assets/DSHR2544.JPG" },
+  { id: 5, path: "/assets/DXJW2187.JPG" },
+  { id: 6, path: "/assets/EKNL4154.JPG" },
+  { id: 7, path: "/assets/FZSF4348.JPG" },
+  { id: 8, path: "/assets/HKTD0173.JPG" },
+  { id: 9, path: "/assets/image00045.jpeg" },
 ];
 
-export   const articles = [
+export const articles: Article[] = [
   {
     id: "1",
     title: "Jaboya: Radical wisdom emerges from the fish for sex trade",
-    blog_content: `Jaboya is Dhuluo, meaning “fish for sex” and it's a form of gendered trade that is commonly used to describe what happens every day when the fisherman at Lake Victoria come back to land and find scores of women waiting to sell themselves for fish.“It's a function of poverty and lack of choices,” the "BD Life" is told by Kathy Tate-Bradish, an HIV educator who works in Western Kenya. “It's the major factor resulting in the counties along the lake having the highest prevalence of HIV in Kenya,” she adds.To best understand the meaning of Jaboya, one needed to be at Kenya National Theatre recently to watch Millaz Players’ performance of Jaboya. Scripted by Emmanuel Chindia, the play captured the vibrant, sensual energy that swells the shore every time men come in with their catch of the day. That's when women scramble to be first in line since the transactions involve both money and fish for sex freely exchanged.`,
+    blog_content: `Jaboya is Dhuluo, meaning "fish for sex" and it's a form of gendered trade that is commonly used to describe what happens every day when the fisherman at Lake Victoria come back to land and find scores of women waiting to sell themselves for fish."It's a function of poverty and lack of choices," the "BD Life" is told by Kathy Tate-Bradish, an HIV educator who works in Western Kenya. "It's the major factor resulting in the counties along the lake having the highest prevalence of HIV in Kenya," she adds.To best understand the meaning of Jaboya, one needed to be at Kenya National Theatre recently to watch Millaz Players' performance of Jaboya. Scripted by Emmanuel Chindia, the play captured the vibrant, sensual energy that swells the shore every time men come in with their catch of the day. That's when women scramble to be first in line since the transactions involve both money and fish for sex freely exchanged.`,
     image: "/assets/HDNJ6031.JPG",
     article_url:
       "https://www.businessdailyafrica.com/bd/lifestyle/art/jaboya-radical-wisdom-emerges-from-the-fish-for-sex-trade--4503362",
@@ -233,7 +213,7 @@ export   const articles = [
   {
     id: "2",
     title: "Dark backstreet stories that pass no judgment",
-    blog_content: `Clare Wahome has been wearing many hats these days. The CEO of one of Nairobi's finest theatre groups, Millaz Productions, is also an actress in her own right. She is currently in rehearsal to co-star with Ben Tekee in Fred Mbogo's gripping drama, ' 'The Dead need no Shoes' which is coming to Kenya National Theatre on May 26.Scripted by Emmanuel Chindla and Saumu Kombo who also directed the play, Clare played Sarah, a young lawyer in mourning with her friends over the tragic demise of her former lover, Justin (Ken Aswani). Their meeting ground is Kares bar where Sarah refuses drinks while her banker friend Ude (Terry Munyeria) chooses to drown her grief by drinking vodka as if it were water. She’s advised against her indulgence by Freddie (Francis Ouma) who we discover late in the play has been having a covert romantic rendezvous that he's been keeping under wraps even among his bar friends.`,
+    blog_content: `Clare Wahome has been wearing many hats these days. The CEO of one of Nairobi's finest theatre groups, Millaz Productions, is also an actress in her own right. She is currently in rehearsal to co-star with Ben Tekee in Fred Mbogo's gripping drama, ' 'The Dead need no Shoes' which is coming to Kenya National Theatre on May 26.Scripted by Emmanuel Chindla and Saumu Kombo who also directed the play, Clare played Sarah, a young lawyer in mourning with her friends over the tragic demise of her former lover, Justin (Ken Aswani). Their meeting ground is Kares bar where Sarah refuses drinks while her banker friend Ude (Terry Munyeria) chooses to drown her grief by drinking vodka as if it were water. She's advised against her indulgence by Freddie (Francis Ouma) who we discover late in the play has been having a covert romantic rendezvous that he's been keeping under wraps even among his bar friends.`,
     image: "/assets/CGPA1495.JPG",
     article_url:
       "https://www.businessdailyafrica.com/bd/lifestyle/art/dark-backstreet-stories-that-pass-no-judgment-3818746",
