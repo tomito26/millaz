@@ -23,13 +23,12 @@ const Home = () => {
         style={{
           backgroundImage:
             "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/DAY75537.jpg')",
-          height: "800px",
           width: "100%",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="flex items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
+        className="flex items-center h-[70vh] min-h-[480px] max-h-[800px] md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
       >
         <div>
           <h1 className="text-4xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
@@ -53,7 +52,7 @@ const Home = () => {
         </div>
       </div>
       <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] my-16 flex justify-between flex-col md:flex-row px-4 gap-5">
-      <div className="lg:w-6/12 w-full">
+      <div className="w-full md:w-1/2">
           <h2 className="text-2xl md:text-4xl text-monochrome font-bold mb-3">
             Who <span className="text-warning-dark">We Are</span>
           </h2>
@@ -73,7 +72,7 @@ const Home = () => {
             contemporary styles to create unique and captivating performances.
           </p>
         </div>
-        <div className="relative md:h-[400px] h-[230px] w-full md:w-[560px] rounded-xl">
+        <div className="relative md:h-[400px] h-[230px] w-full md:w-1/2 rounded-xl">
           <Image
             src="/assets/HDKC8377.JPG"
             alt="actors on stage"
@@ -82,14 +81,14 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="md:px-[60px] xl-px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 my-24">
+      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4 mb-24">
         <h2 className="text-2xl md:text-4xl font-bold  text-monochrome mb-8">
           Upcoming <span className="text-warning-dark">Productions</span>
         </h2>
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {productions.map((production) => (
             <div key={production.id}>
-              <div className="relative h-[360px] md:h-[400px] w-full md:w-[330px] rounded-lg">
+              <div className="relative h-[360px] md:h-[400px] w-full rounded-lg">
                 <Image
                   src={production.poster_url}
                   alt={production.name}
@@ -97,7 +96,7 @@ const Home = () => {
                   className="absolute object-cover rounded-lg"
                 />
               </div>
-              <div className="w-[330px]">
+              <div className="w-full">
                 <h2 className="text-lg font-semibold mt-3 text-monochrome">
                   {production.name}
                 </h2>
@@ -118,7 +117,7 @@ const Home = () => {
                     })}
                   </span>
                 </p>
-                <p className="text-sm text-tundora break-all mb-5">
+                <p className="text-sm text-tundora break-words mb-5">
                   {production.description.length > 100
                     ? `${production.description.substring(0, 200)}...`
                     : production.description}
@@ -146,10 +145,10 @@ const Home = () => {
           <h2 className="text-2xl md:text-4xl font-bold text-monochrome mb-6">
             What <span className="text-warning-dark">We Do</span>
           </h2>
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {our_services.map((service) => (
               <div
-                className="shadow-md w-full md:w-[350px] bg-white rounded-b-md"
+                className="shadow-md w-full bg-white rounded-b-md"
                 key={service.id}
               >
                 <div className="relative w-full h-[250px] rounded-t-md">
@@ -286,7 +285,7 @@ const Home = () => {
                     ? `${article.title.substring(0, 60)}...`
                     : article.title}
                 </h3>
-                <p className="text-tundora text-sm md:text-base mt-2 break-all">
+                <p className="text-tundora text-sm md:text-base mt-2 break-words">
                   {article && article.blog_content.length > 100
                     ? `${article.blog_content.substring(0, 100)}...`
                     : ""}

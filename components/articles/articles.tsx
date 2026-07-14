@@ -46,12 +46,12 @@ const Articles = () => {
                 />
               </div>
               <div className="px-4 py-4">
-                <h3 className="text-lg text-monochrome font-bold break-all">
+                <h3 className="text-lg text-monochrome font-bold break-words">
                   {article && article.title.length > 60
                     ? `${article.title.substring(0, 60)}...`
                     : article.title}
                 </h3>
-                <p className="text-tundora text-sm md:text-base mt-2 break-all">
+                <p className="text-tundora text-sm md:text-base mt-2 break-words">
                   {article && article.blog_content.length > 100
                     ? `${article.blog_content.substring(0, 100)}...`
                     : ""}

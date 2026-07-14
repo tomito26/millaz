@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "flex justify-between items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] absolute w-full bg-white md:bg-transparent"
+        "flex justify-between items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] absolute w-full bg-transparent"
       )}
     >
       <div className="h-[120px] w-[120px] relative">
