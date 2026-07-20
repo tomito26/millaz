@@ -326,3 +326,29 @@ export   const articles = [
     article_url: "https://www.businessdailyafrica.com/bd/lifestyle/art/young-script-writers-map-out-violence-stage-3655554",
   },
 ];
+
+// NOTE: placeholder figures — swap for the company's real numbers.
+export const stats = [
+  { value: "8+", label: "Years on Stage" },
+  { value: "40+", label: "Productions Staged" },
+  { value: "12", label: "Awards & Nominations" },
+  { value: "200+", label: "Artists Trained" },
+];
+
+// Outlets that have featured Millaz (drawn from the featured articles).
+export const pressLogos = [
+  "Business Daily",
+  "The Theatre Times",
+  "Sanaa Post",
+  "Kenya Theatre Awards",
+  "Kenya National Theatre",
+];
+
+// Short marquee items for the "Now Booking" ticker.
+export const marqueeItems = [
+  "Now Booking: Backstreet Edition 2",
+  "Kenya National Theatre",
+  "Jun 14 – 16",
+  "Entertain · Empower · Educate",
+  "Book your seats today",
+];

@@ -15,52 +15,63 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <nav
-      className={cn(
-        "flex justify-between items-center md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] absolute w-full bg-white md:bg-transparent"
-      )}
-    >
-      <div className="h-[120px] w-[120px] relative">
+    <nav className="section-x absolute z-30 flex w-full items-center justify-between">
+      <Link href="/" className="relative h-[110px] w-[110px] shrink-0">
         <Image
           src="/assets/millaz.svg"
-          alt="millaz production"
+          alt="Millaz Productions Kenya"
           fill
-          className="object-cover absolute"
+          priority
+          className="object-contain"
         />
-      </div>
+      </Link>
       <div className="flex items-center gap-6">
         <button
-          className="block md:hidden px-5 py-2.5 text-white text-base"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          className="block rounded-md p-2 text-white md:hidden"
           onClick={toggleMenu}
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
         <ul
           className={cn(
-            isOpen ? "block" : "hidden",
-            "absolute md:relative md:flex list-none bg-white md:bg-transparent top-[100%] left-0 right-0 md:top-auto md:left-auto md:right-auto p-4 md:p-0 z-10"
+            isOpen ? "flex" : "hidden",
+            "absolute left-0 right-0 top-full flex-col gap-1 border-t border-white/10 bg-stage p-4 md:relative md:top-auto md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0"
           )}
         >
-          {navLinks.map((link) => (
-            <li key={link.title} className="md:mr-8 my-4 md:my-0">
-              <Link
-                href={link.link}
-                className={cn(
-                  pathname === link.link
-                    ? "text-warning-dark"
-                    : "text-black md:text-white",
-                  "block hover:text-warning-dark"
-                )}
-                onClick={toggleMenu}
-              >
-                {link.title}
-              </Link>
-            </li>
-          ))}
-          <button className="hidden md:block px-5 py-2.5 bg-warning-dark rounded-lg text-white text-base font-semibold hover:bg-warning-dark/85">
-            Contact Us
-          </button>
+          {navLinks.map((link) => {
+            const active = pathname === link.link;
+            return (
+              <li key={link.title}>
+                <Link
+                  href={link.link}
+                  onClick={closeMenu}
+                  data-active={active}
+                  className={cn(
+                    "nav-underline inline-block py-2 text-sm font-medium tracking-wide transition-colors md:py-0",
+                    active
+                      ? "text-footlight"
+                      : "text-white/90 hover:text-footlight"
+                  )}
+                >
+                  {link.title}
+                </Link>
+              </li>
+            );
+          })}
+          <li className="mt-2 md:mt-0">
+            <Link
+              href="/about#contact"
+              onClick={closeMenu}
+              className="inline-flex rounded-md bg-curtain px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-curtain-dark"
+            >
+              Contact Us
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

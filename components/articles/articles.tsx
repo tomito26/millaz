@@ -3,70 +3,72 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { articles } from "@/lib/constants";
+import { Reveal } from "@/components/ui/reveal";
+import { CursorSpotlight } from "@/components/ui/cursor-spotlight";
 
 const Articles = () => {
-
   return (
     <div>
-      <div
+      {/* ---------- HERO ---------- */}
+      <header
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('/assets/EQGJ1018.JPG')",
-          height: "60vh",
-          width: "100%",
+            "linear-gradient(rgba(22,17,15,0.72), rgba(22,17,15,0.82)), url('/assets/EQGJ1018.JPG')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="flex items-center   md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px] px-4"
+        className="grain vignette relative flex min-h-[58vh] items-center bg-stage"
       >
-        <div className="mt-12 md:mt-0">
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 md:mb-6">
-            Featured Articles
+        <CursorSpotlight />
+        <div className="section-x relative z-10 w-full py-28">
+          <p className="kicker mb-4">From the Press</p>
+          <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">
+            Featured <span className="text-footlight">Articles</span>
           </h1>
-          <p className="max-w-3xl text-white text-sm md:text-base">
+          <p className="max-w-2xl text-sm text-paper-dim md:text-base">
             Explore behind-the-scenes stories, interviews with cast and crew,
             and articles about our latest and upcoming shows.
           </p>
         </div>
-      </div>
-      <div className="md:px-[60px] xl:px-[80px] 2xl:px-[100px] 3xl:px-[160px]  px-4 mt-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-5">
-          {articles.map((article) => (
-            <div
-              key={article.id}
-              className=" w-full border rounded-b-md shadow-sm"
-            >
-              <div className="w-full h-[240px] rounded-md relative">
-                <Image
-                  src={article.image}
-                  fill
-                  alt="millaz"
-                  className="absolute object-cover rounded-t-md"
-                />
-              </div>
-              <div className="px-4 py-4">
-                <h3 className="text-lg text-monochrome font-bold break-all">
-                  {article && article.title.length > 60
-                    ? `${article.title.substring(0, 60)}...`
-                    : article.title}
-                </h3>
-                <p className="text-tundora text-sm md:text-base mt-2 break-all">
-                  {article && article.blog_content.length > 100
-                    ? `${article.blog_content.substring(0, 100)}...`
-                    : ""}
-                </p>
-                <Link href={article.article_url}>
-                  <button className="flex text-sm hover:underline text-warning-dark gap-2 items-center mt-3">
+      </header>
+
+      {/* ---------- ARTICLE GRID ---------- */}
+      <section className="section-x py-20">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          {articles.map((article, i) => (
+            <Reveal key={article.id} delay={(i % 4) * 90}>
+              <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="relative h-[220px] w-full overflow-hidden">
+                  <Image
+                    src={article.image}
+                    fill
+                    alt={article.title}
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col px-5 py-5">
+                  <h3 className="text-lg font-bold text-ink">
+                    {article.title.length > 70
+                      ? `${article.title.substring(0, 70)}...`
+                      : article.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-3 text-sm text-ink-muted md:text-base">
+                    {article.blog_content}
+                  </p>
+                  <Link
+                    href={article.article_url || "#"}
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-curtain hover:underline"
+                  >
                     Read more
-                    <ArrowRight className="h-4 w-4 stroke-warning-dark" />
-                  </button>
-                </Link>
-              </div>
-            </div>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </article>
+            </Reveal>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 };
