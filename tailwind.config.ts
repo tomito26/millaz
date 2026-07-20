@@ -15,7 +15,33 @@ const config: Config = {
         "2xl": "1400px",
         "3xl": "1700px"
       },
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
+      },
       colors: {
+        // --- Millaz theatre brand tokens (anchored on the logo) ---
+        stage: {
+          DEFAULT: "#16110F", // warm near-black — heroes, footer, dark sections
+          800: "#221A17", // elevated dark surface (cards/panels on dark)
+        },
+        curtain: {
+          DEFAULT: "#CB271E", // primary accent + primary CTA (logo red)
+          dark: "#A81F17", // hover / pressed
+        },
+        spotlight: {
+          DEFAULT: "#079C1C", // supporting accent, ticket / secondary CTA (logo green)
+          dark: "#06841A", // hover
+        },
+        footlight: "#E0A93B", // gold — kickers, dividers, swiper bullets
+        paper: {
+          DEFAULT: "#FBF7F2", // cream — light section backgrounds
+          dim: "#E9E2DC", // body text on dark stage backgrounds
+        },
+        ink: {
+          DEFAULT: "#1A1414", // primary text / headings on light
+          muted: "#5A514E", // secondary / body text on light
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -89,10 +115,20 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        shimmer: {
+          "0%": { transform: "translateX(-120%) skewX(-12deg)" },
+          "60%, 100%": { transform: "translateX(220%) skewX(-12deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        marquee: "marquee 30s linear infinite",
+        "marquee-slow": "marquee 55s linear infinite",
       },
     },
   },

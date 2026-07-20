@@ -1,9 +1,12 @@
-import React from 'react'
+import Productions from "@/components/productions/productions";
+import React from "react";
 
 const OurProductionsPage = () => {
   return (
-    <div>OurProductionsPage</div>
-  )
-}
+    <div>
+      <Productions />
+    </div>
+  );
+};
 
-export default OurProductionsPage
+export default OurProductionsPage;
